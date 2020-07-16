@@ -6,9 +6,10 @@ require 'pry'
 
 
 #Tested
+input = 'AMZN'
 
 #Costco 
-cost = Nokogiri::HTML(open("https://finance.yahoo.com/quote/NTDOY"))
+cost = Nokogiri::HTML(open("https://finance.yahoo.com/quote/#{input}"))
 binding.pry
 # Stock Price
 cost.css('#quote-header-info').css("span").children[1].inner_text
@@ -20,7 +21,8 @@ cost.css('#quote-header-info').css("span").children[2].inner_text
 cost.css('#quote-summary').css("tr").children[9].inner_text
 # 52 week High / Low
 cost.css('#quote-summary').css("tr").children[11].inner_text
-
+# Company Name
+cost.css('#quote-header-info').css("h1").inner_text
 
 # #Amazon
 # amzn = Nokogiri::HTML(open("https://finance.yahoo.com/quote/AMZN"))
