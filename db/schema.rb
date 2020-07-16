@@ -10,10 +10,50 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_14_171747) do
+ActiveRecord::Schema.define(version: 2020_07_16_013644) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "companies", force: :cascade do |t|
+    t.string "ticker"
+    t.string "name"
+    t.string "logo"
+    t.string "sector"
+  end
+
+  create_table "portfolios", force: :cascade do |t|
+    t.string "name"
+    t.float "value"
+    t.integer "user_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "stock_prices", force: :cascade do |t|
+    t.integer "company_id"
+    t.string "current_price"
+    t.string "dollar_change"
+    t.string "percent_change"
+    t.string "as_of_time"
+    t.string "daily_high"
+    t.string "daily_low"
+    t.string "fifty_two_week_high"
+    t.string "fifty_two_week_low"
+    t.boolean "transacted"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "transactions", force: :cascade do |t|
+    t.integer "stock_price_id"
+    t.integer "portfolio_id"
+    t.string "buy_sell"
+    t.integer "quantity"
+    t.string "purchase_price"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "username"
