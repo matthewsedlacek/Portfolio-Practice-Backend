@@ -546,166 +546,18 @@
 
 #Stock Prices
 
-StockPrice.destroy_all
+# StockPrice.destroy_all
 
 
-def stock_tickers
-    [ 'MMM','ABT','ABBV','ABMD','ACN','ATVI','ADBE','AMD','AAP','AES','AFL','A','APD','AKAM','ALK','ALB','ARE','ALXN','ALGN','ALLE','LNT','ALL','GOOGL','GOOG','MO','AMZN','AMCR','AEE','AAL','AEP','AXP','AIG','AMT','AWK','AMP','ABC','AME','AMGN','APH','ADI','ANSS','ANTM','AON','AOS','APA','AIV','AAPL','AMAT','APTV','ADM','ANET','AJG','AIZ','T','ATO','ADSK','ADP','AZO','AVB','AVY','BKR','BLL','BAC','BK','BAX','BDX','BRK-B','BBY','BIIB','BIO','BLK','BA','BKNG','BWA','BXP','BSX','BMY','AVGO','BR','BF-B','CHRW','COG','CDNS','CPB','COF','CAH','KMX','CCL','CARR','CAT','CBOE','CBRE','CDW','CE','CNC','CNP','CTL','CERN','CF','SCHW','CHTR','CVX','CMG', 'CB','CHD','CI','CINF','CTAS','CSCO','C','CFG','CTXS','CLX','CME','CMS','KO','CTSH','CL', 'CMCSA','CMA','CAG','CXO','COP','ED','STZ','COO','CPRT','GLW','CTVA','COST','COTY','CCI','CSX','CMI','CVS','DHI','DHR','DRI','DVA','DE','DAL','XRAY','DVN','DXCM','FANG','DLR','DFS','DISCA','DISCK','DISH','DG','DLTR','D','DPZ','DOV','DOW','DTE','DUK','DRE','DD','DXC','ETFC','EMN','ETN','EBAY','ECL','EIX','EW','EA','EMR','ETR','EOG','EFX','EQIX','EQR','ESS','EL','EVRG','ES','RE','EXC','EXPE','EXPD','EXR','XOM','FFIV','FB','FAST','FRT','FDX','FIS','FITB','FE','FRC','FISV','FLT','FLIR','FLS','FMC','F','FTNT','FTV','FBHS','FOXA','FOX','BEN','FCX','GPS','GRMN','IT','GD','GE','GIS','GM','GPC','GILD','GL','GPN','GS','GWW','HRB','HAL','HBI','HIG','HAS','HCA','PEAK','HSIC','HSY','HES','HPE','HLT','HFC','HOLX','HD','HON','HRL','HST','HWM','HPQ','HUM','HBAN','HII','IEX','IDXX','INFO','ITW','ILMN','INCY','IR','INTC','ICE','IBM','IP','IPG','IFF','INTU','ISRG','IVZ','IPGP','IQV','IRM','JKHY','J','JBHT','SJM','JNJ','JCI','JPM','JNPR','KSU','K','KEY','KEYS','KMB','KIM','KMI','KLAC','KSS','KHC','KR','LB','LHX','LH','LRCX','LW','LVS','LEG','LDOS','LEN','LLY','LNC','LIN','LYV','LKQ','LMT','L','LOW','LYB','MTB','MRO','MPC','MKTX','MAR','MMC','MLM','MAS','MA','MKC','MXIM','MCD','MCK','MDT','MRK','MET','MTD','MGM','MCHP','MU','MSFT','MAA','MHK','TAP','MDLZ','MNST','MCO','MS','MOS','MSI','MSCI','MYL','NDAQ','NOV','NTAP','NFLX','NWL','NEM','NWSA','NWS','NEE','NLSN','NKE','NI','NBL','NSC','NTRS','NOC','NLOK','NCLH','NRG','NUE','NVDA','NVR','ORLY','OXY','ODFL','OMC','OKE','ORCL','OTIS','PCAR','PKG','PH','PAYX','PAYC','PYPL','PNR','PBCT','PEP','PKI','PRGO','PFE','PM','PSX','PNW','PXD','PNC','PPG','PPL','PFG','PG','PGR','PLD','PRU','PEG','PSA','PHM','PVH','QRVO','PWR','QCOM','DGX','RL','RJF','RTX','O','REG','REGN','RF','RSG','RMD','RHI','ROK','ROL','ROP','ROST','RCL','SPGI','CRM','SBAC','SLB','STX','SEE','SRE','NOW','SHW','SPG','SWKS','SLG','SNA','SO','LUV','SWK','SBUX','STT','STE','SYK','SIVB','SYF','SNPS','SYY','TMUS','TROW','TTWO','TPR','TGT','TEL','FTI','TFX','TXN','TXT','TMO','TIF','TJX','TSCO','TT','TDG','TDY','TRV','TFC','TWTR','TSN','TYL','UDR','ULTA','USB','UAA','UA','UNP','UAL','UNH','UPS','URI','UHS','UNM','VFC','VLO','VAR','VTR','VRSN','VRSK','VZ','VRTX','VIAC','V','VNO','VMC','WRB','WAB','WMT','WBA','DIS','WM', 'WAT','WEC','WFC','WELL','WST','WDC','WU','WRK','WY','WHR','WMB','WLTW','WYNN','XEL','XRX','XLNX','XYL','YUM','ZBRA','ZBH','ZION','ZTS']
-end
-
-
-
-
-#Errors
-# GOOGL
-# AMCR
-# AEE
-# AMP
-
-# def stock_tickers_one_a
-#     [ 'MMM','ABT','ABBV','ABMD','ACN','ATVI','ADBE','AMD','AAP','AES','AFL','A','APD','AKAM','ALK','ALB','ARE','ALXN','ALGN','ALLE','LNT','ALL','GOOGL','GOOG','MO','AMZN','AMCR','AEE','AAL','AEP','AXP','AIG','AMT','AWK','AMP','ABC','AME','AMGN','APH','ADI','ANSS','ANTM','AON','AOS','APA','AIV','AAPL','AMAT','APTV','ADM','ANET','AJG','AIZ','T','ATO','ADSK','ADP']
-# end
-
-# def stock_tickers_one_b
-#         ['AZO','AVB','AVY','BKR','BLL','BAC','BK','BAX','BDX','BRK-B','BBY','BIIB','BIO','BLK','BA','BKNG','BWA','BXP','BSX','BMY','AVGO','BR','BF-B','CHRW','COG','CDNS','CPB','COF','CAH','KMX','CCL','CARR','CAT','CBOE','CBRE','CDW','CE','CNC','CNP','CTL','CERN','CF','SCHW','CHTR','CVX','CMG', 'CB','CHD','CI','CINF','CTAS','CSCO','C','CFG','CTXS','CLX','CME','CMS']
-# end       
-
-# def stock_tickers_two_a
-#         ['KO','CTSH','CL', 'CMCSA','CMA','CAG','CXO','COP','ED','STZ','COO','CPRT','GLW','CTVA','COST','COTY','CCI','CSX','CMI','CVS','DHI','DHR','DRI','DVA','DE','DAL','XRAY','DVN','DXCM','FANG','DLR','DFS','DISCA','DISCK','DISH','DG','DLTR','D','DPZ','DOV','DOW','DTE','DUK','DRE','DD','DXC','ETFC','EMN','ETN','EBAY','ECL','EIX','EW','EA','EMR','ETR']
-# end
-
-# def stock_tickers_two_b
-#     ['EOG','EFX','EQIX','EQR','ESS','EL','EVRG','ES','RE','EXC','EXPE','EXPD','EXR','XOM','FFIV','FB','FAST','FRT','FDX','FIS','FITB','FE','FRC','FISV','FLT','FLIR','FLS','FMC','F','FTNT','FTV','FBHS','FOXA','FOX','BEN','FCX','GPS','GRMN','IT','GD','GE','GIS','GM','GPC','GILD','GL','GPN','GS','GWW','HRB','HAL','HBI','HIG','HAS','HCA','PEAK','HSIC','HSY','HES']
-# end
-
-# def stock_tickers_three_a
-#         ['HPE','HLT','HFC','HOLX','HD','HON','HRL','HST','HWM','HPQ','HUM','HBAN','HII','IEX','IDXX','INFO','ITW','ILMN','INCY','IR','INTC','ICE','IBM','IP','IPG','IFF','INTU','ISRG','IVZ','IPGP','IQV','IRM','JKHY','J','JBHT','SJM','JNJ','JCI','JPM','JNPR','KSU','K','KEY','KEYS','KMB','KIM','KMI','KLAC','KSS','KHC','KR','LB','LHX','LH','LRCX','LW','LVS']
-# end
-
-# def stock_tickers_three_b
-#     ['LEG','LDOS','LEN','LLY','LNC','LIN','LYV','LKQ','LMT','L','LOW','LYB','MTB','MRO','MPC','MKTX','MAR','MMC','MLM','MAS','MA','MKC','MXIM','MCD','MCK','MDT','MRK','MET','MTD','MGM','MCHP','MU','MSFT','MAA','MHK','TAP','MDLZ','MNST','MCO','MS','MOS','MSI','MSCI','MYL','NDAQ','NOV','NTAP','NFLX','NWL','NEM','NWSA','NWS','NEE','NLSN','NKE','NI','NBL']
-# end
-
-# def stock_tickers_four_a
-#         ['NSC','NTRS','NOC','NLOK','NCLH','NRG','NUE','NVDA','NVR','ORLY','OXY','ODFL','OMC','OKE','ORCL','OTIS','PCAR','PKG','PH','PAYX','PAYC','PYPL','PNR','PBCT','PEP','PKI','PRGO','PFE','PM','PSX','PNW','PXD','PNC','PPG','PPL','PFG','PG','PGR','PLD','PRU','PEG','PSA','PHM','PVH','QRVO','PWR','QCOM','DGX','RL','RJF','RTX','O','REG','REGN','RF','RSG','RMD']
-# end
-
-# def stock_tickers_four_b
-#     ['RHI','ROK','ROL','ROP','ROST','RCL','SPGI','CRM','SBAC','SLB','STX','SEE','SRE','NOW','SHW','SPG','SWKS','SLG','SNA','SO','LUV','SWK','SBUX','STT','STE','SYK','SIVB','SYF','SNPS','SYY','TMUS','TROW','TTWO','TPR','TGT','TEL','FTI','TFX','TXN','TXT','TMO','TIF','TJX','TSCO','TT','TDG','TDY','TRV','TFC','TWTR','TSN','TYL','UDR','ULTA','USB','UAA']
-# end
-
-# def stock_tickers_five
-#         ['UA','UNP','UAL','UNH','UPS','URI','UHS','UNM','VFC','VLO','VAR','VTR','VRSN','VRSK','VZ','VRTX','VIAC','V','VNO','VMC','WRB','WAB','WMT','WBA','DIS','WM', 'WAT','WEC','WFC','WELL','WST','WDC','WU','WRK','WY','WHR','WMB','WLTW','WYNN','XEL','XRX','XLNX','XYL','YUM','ZBRA','ZBH','ZION','ZTS']
+# def stock_tickers
+#     [ 'MMM','ABT','ABBV','ABMD','ACN','ATVI','ADBE','AMD','AAP','AES','AFL','A','APD','AKAM','ALK','ALB','ARE','ALXN','ALGN','ALLE','LNT','ALL','GOOGL','GOOG','MO','AMZN','AMCR','AEE','AAL','AEP','AXP','AIG','AMT','AWK','AMP','ABC','AME','AMGN','APH','ADI','ANSS','ANTM','AON','AOS','APA','AIV','AAPL','AMAT','APTV','ADM','ANET','AJG','AIZ','T','ATO','ADSK','ADP','AZO','AVB','AVY','BKR','BLL','BAC','BK','BAX','BDX','BRK-B','BBY','BIIB','BIO','BLK','BA','BKNG','BWA','BXP','BSX','BMY','AVGO','BR','BF-B','CHRW','COG','CDNS','CPB','COF','CAH','KMX','CCL','CARR','CAT','CBOE','CBRE','CDW','CE','CNC','CNP','CTL','CERN','CF','SCHW','CHTR','CVX','CMG', 'CB','CHD','CI','CINF','CTAS','CSCO','C','CFG','CTXS','CLX','CME','CMS','KO','CTSH','CL', 'CMCSA','CMA','CAG','CXO','COP','ED','STZ','COO','CPRT','GLW','CTVA','COST','COTY','CCI','CSX','CMI','CVS','DHI','DHR','DRI','DVA','DE','DAL','XRAY','DVN','DXCM','FANG','DLR','DFS','DISCA','DISCK','DISH','DG','DLTR','D','DPZ','DOV','DOW','DTE','DUK','DRE','DD','DXC','ETFC','EMN','ETN','EBAY','ECL','EIX','EW','EA','EMR','ETR','EOG','EFX','EQIX','EQR','ESS','EL','EVRG','ES','RE','EXC','EXPE','EXPD','EXR','XOM','FFIV','FB','FAST','FRT','FDX','FIS','FITB','FE','FRC','FISV','FLT','FLIR','FLS','FMC','F','FTNT','FTV','FBHS','FOXA','FOX','BEN','FCX','GPS','GRMN','IT','GD','GE','GIS','GM','GPC','GILD','GL','GPN','GS','GWW','HRB','HAL','HBI','HIG','HAS','HCA','PEAK','HSIC','HSY','HES','HPE','HLT','HFC','HOLX','HD','HON','HRL','HST','HWM','HPQ','HUM','HBAN','HII','IEX','IDXX','INFO','ITW','ILMN','INCY','IR','INTC','ICE','IBM','IP','IPG','IFF','INTU','ISRG','IVZ','IPGP','IQV','IRM','JKHY','J','JBHT','SJM','JNJ','JCI','JPM','JNPR','KSU','K','KEY','KEYS','KMB','KIM','KMI','KLAC','KSS','KHC','KR','LB','LHX','LH','LRCX','LW','LVS','LEG','LDOS','LEN','LLY','LNC','LIN','LYV','LKQ','LMT','L','LOW','LYB','MTB','MRO','MPC','MKTX','MAR','MMC','MLM','MAS','MA','MKC','MXIM','MCD','MCK','MDT','MRK','MET','MTD','MGM','MCHP','MU','MSFT','MAA','MHK','TAP','MDLZ','MNST','MCO','MS','MOS','MSI','MSCI','MYL','NDAQ','NOV','NTAP','NFLX','NWL','NEM','NWSA','NWS','NEE','NLSN','NKE','NI','NBL','NSC','NTRS','NOC','NLOK','NCLH','NRG','NUE','NVDA','NVR','ORLY','OXY','ODFL','OMC','OKE','ORCL','OTIS','PCAR','PKG','PH','PAYX','PAYC','PYPL','PNR','PBCT','PEP','PKI','PRGO','PFE','PM','PSX','PNW','PXD','PNC','PPG','PPL','PFG','PG','PGR','PLD','PRU','PEG','PSA','PHM','PVH','QRVO','PWR','QCOM','DGX','RL','RJF','RTX','O','REG','REGN','RF','RSG','RMD','RHI','ROK','ROL','ROP','ROST','RCL','SPGI','CRM','SBAC','SLB','STX','SEE','SRE','NOW','SHW','SPG','SWKS','SLG','SNA','SO','LUV','SWK','SBUX','STT','STE','SYK','SIVB','SYF','SNPS','SYY','TMUS','TROW','TTWO','TPR','TGT','TEL','FTI','TFX','TXN','TXT','TMO','TIF','TJX','TSCO','TT','TDG','TDY','TRV','TFC','TWTR','TSN','TYL','UDR','ULTA','USB','UAA','UA','UNP','UAL','UNH','UPS','URI','UHS','UNM','VFC','VLO','VAR','VTR','VRSN','VRSK','VZ','VRTX','VIAC','V','VNO','VMC','WRB','WAB','WMT','WBA','DIS','WM', 'WAT','WEC','WFC','WELL','WST','WDC','WU','WRK','WY','WHR','WMB','WLTW','WYNN','XEL','XRX','XLNX','XYL','YUM','ZBRA','ZBH','ZION','ZTS']
 # end
 
 
-
-# def stock_tickers 
-#     ['ALB','GOOGL','AMZN']
-# end
-
-def stock_scrapper
-    url = "https://finance.yahoo.com/quote/"
-    array = []
-    stock_tickers.each_with_index {|stock, index|
-        sleep 15
-        url = url.concat(stock)
-        if cost = Nokogiri::HTML(open(url))
-            cost = Nokogiri::HTML(open(url))
-        else
-            cost = "not found"
-            url = "https://finance.yahoo.com/quote/"
-        end
-
-        if stock_price = cost.css('#quote-header-info').css("span").children[1]
-            stock_price = cost.css('#quote-header-info').css("span").children[1].inner_text
-        else 
-            stock_price = "not found"
-            url = "https://finance.yahoo.com/quote/"
-        end
-
-        if stock_time = cost.css('#quote-market-notice').inner_text 
-            stock_time = cost.css('#quote-market-notice').inner_text
-        else 
-            stock_time = "not found"
-            url = "https://finance.yahoo.com/quote/"
-        end
-
-        if stock_change = cost.css('#quote-header-info').css("span").children[2]
-            stock_change = cost.css('#quote-header-info').css("span").children[2].inner_text.split(" ")
-        else 
-            stock_change = "not found"
-            url = "https://finance.yahoo.com/quote/"
-        end
-
-        if dollar_change = stock_change[0] 
-            dollar_change = stock_change[0]
-        else 
-            dollar_change = "not found"
-            url = "https://finance.yahoo.com/quote/"
-        end
-
-        if percent_change = stock_change[1] 
-            percent_change = stock_change[1]
-        else
-            percent_change = "not found"
-            url = "https://finance.yahoo.com/quote/"
-        end
-
-        if daily = cost.css('#quote-summary').css("tr").children[9] 
-            daily = cost.css('#quote-summary').css("tr").children[9].inner_text.split(" ")
-        else 
-            daily = "not found"
-            url = "https://finance.yahoo.com/quote/"
-        end
-
-        if daily_low = daily[0] 
-            daily_low = daily[0]
-        else
-            daily_low = "not found"
-            url = "https://finance.yahoo.com/quote/"
-        end
-
-        if daily_high = daily[2] 
-            daily_high = daily[2]
-        else
-            daily_high = "not found"
-            url = "https://finance.yahoo.com/quote/"
-        end
-
-        if fifty_two = cost.css('#quote-summary').css("tr").children[11] 
-            fifty_two = cost.css('#quote-summary').css("tr").children[11].inner_text.split(" ")
-        else
-            fifty_two = "not found"
-            url = "https://finance.yahoo.com/quote/"
-        end
-
-        if fifty_two_low = fifty_two[0] 
-            fifty_two_low = fifty_two[0]
-        else
-            fifty_two_low = "not found"
-            url = "https://finance.yahoo.com/quote/"
-        end
-
-        if fifty_two_high = fifty_two[2] 
-            fifty_two_high = fifty_two[2]
-        else
-            fifty_two_high = "not found"
-            url = "https://finance.yahoo.com/quote/"
-        end
-
-        StockPrice.create(company_id: index + 1, current_price: stock_price, dollar_change: dollar_change, percent_change: percent_change, as_of_time: stock_time, daily_high: daily_high, daily_low: daily_low, fifty_two_week_high: fifty_two_high, fifty_two_week_low: fifty_two_low, transacted: false)
-        url = "https://finance.yahoo.com/quote/"
-    }
-  end
-
-
-
-# def stock_scrapper_one_a
+# def stock_scrapper
 #     url = "https://finance.yahoo.com/quote/"
 #     array = []
-#     stock_tickers_one_a.each_with_index {|stock, index|
-#         sleep 45
+#     stock_tickers.each_with_index {|stock, index|
 #         url = url.concat(stock)
 #         if cost = Nokogiri::HTML(open(url))
 #             cost = Nokogiri::HTML(open(url))
@@ -796,781 +648,914 @@ def stock_scrapper
 #     }
 #   end
 
-#   def stock_scrapper_one_b
-#     sleep 45
-#     url = "https://finance.yahoo.com/quote/"
-#     array = []
-#     stock_tickers_one_b.each_with_index {|stock, index|
-#         sleep 45
-#         url = url.concat(stock)
-#         if cost = Nokogiri::HTML(open(url))
-#             cost = Nokogiri::HTML(open(url))
-#         else
-#             cost = "not found"
-#             url = "https://finance.yahoo.com/quote/"
-#         end
-
-#         if stock_price = cost.css('#quote-header-info').css("span").children[1]
-#             stock_price = cost.css('#quote-header-info').css("span").children[1].inner_text
-#         else 
-#             stock_price = "not found"
-#             url = "https://finance.yahoo.com/quote/"
-#         end
-
-#         if stock_time = cost.css('#quote-market-notice').inner_text 
-#             stock_time = cost.css('#quote-market-notice').inner_text
-#         else 
-#             stock_time = "not found"
-#             url = "https://finance.yahoo.com/quote/"
-#         end
-
-#         if stock_change = cost.css('#quote-header-info').css("span").children[2]
-#             stock_change = cost.css('#quote-header-info').css("span").children[2].inner_text.split(" ")
-#         else 
-#             stock_change = "not found"
-#             url = "https://finance.yahoo.com/quote/"
-#         end
-
-#         if dollar_change = stock_change[0] 
-#             dollar_change = stock_change[0]
-#         else 
-#             dollar_change = "not found"
-#             url = "https://finance.yahoo.com/quote/"
-#         end
-
-#         if percent_change = stock_change[1] 
-#             percent_change = stock_change[1]
-#         else
-#             percent_change = "not found"
-#             url = "https://finance.yahoo.com/quote/"
-#         end
-
-#         if daily = cost.css('#quote-summary').css("tr").children[9] 
-#             daily = cost.css('#quote-summary').css("tr").children[9].inner_text.split(" ")
-#         else 
-#             daily = "not found"
-#             url = "https://finance.yahoo.com/quote/"
-#         end
-
-#         if daily_low = daily[0] 
-#             daily_low = daily[0]
-#         else
-#             daily_low = "not found"
-#             url = "https://finance.yahoo.com/quote/"
-#         end
-
-#         if daily_high = daily[2] 
-#             daily_high = daily[2]
-#         else
-#             daily_high = "not found"
-#             url = "https://finance.yahoo.com/quote/"
-#         end
-
-#         if fifty_two = cost.css('#quote-summary').css("tr").children[11] 
-#             fifty_two = cost.css('#quote-summary').css("tr").children[11].inner_text.split(" ")
-#         else
-#             fifty_two = "not found"
-#             url = "https://finance.yahoo.com/quote/"
-#         end
-
-#         if fifty_two_low = fifty_two[0] 
-#             fifty_two_low = fifty_two[0]
-#         else
-#             fifty_two_low = "not found"
-#             url = "https://finance.yahoo.com/quote/"
-#         end
-
-#         if fifty_two_high = fifty_two[2] 
-#             fifty_two_high = fifty_two[2]
-#         else
-#             fifty_two_high = "not found"
-#             url = "https://finance.yahoo.com/quote/"
-#         end
-
-#         StockPrice.create(company_id: index + 58, current_price: stock_price, dollar_change: dollar_change, percent_change: percent_change, as_of_time: stock_time, daily_high: daily_high, daily_low: daily_low, fifty_two_week_high: fifty_two_high, fifty_two_week_low: fifty_two_low, transacted: false)
-#         url = "https://finance.yahoo.com/quote/"
-#     }
-#   end
-
-
-#   def stock_scrapper_two_a
-#     sleep 45
-#     url = "https://finance.yahoo.com/quote/"
-#     array = []
-#     stock_tickers_two_a.each_with_index {|stock, index|
-#         sleep 45
-#         url = url.concat(stock)
-#         if cost = Nokogiri::HTML(open(url))
-#             cost = Nokogiri::HTML(open(url))
-#         else
-#             cost = "not found"
-#             url = "https://finance.yahoo.com/quote/"
-#         end
-
-#         if stock_price = cost.css('#quote-header-info').css("span").children[1]
-#             stock_price = cost.css('#quote-header-info').css("span").children[1].inner_text
-#         else 
-#             stock_price = "not found"
-#             url = "https://finance.yahoo.com/quote/"
-#         end
-
-#         if stock_time = cost.css('#quote-market-notice').inner_text 
-#             stock_time = cost.css('#quote-market-notice').inner_text
-#         else 
-#             stock_time = "not found"
-#             url = "https://finance.yahoo.com/quote/"
-#         end
-
-#         if stock_change = cost.css('#quote-header-info').css("span").children[2]
-#             stock_change = cost.css('#quote-header-info').css("span").children[2].inner_text.split(" ")
-#         else 
-#             stock_change = "not found"
-#             url = "https://finance.yahoo.com/quote/"
-#         end
-
-#         if dollar_change = stock_change[0] 
-#             dollar_change = stock_change[0]
-#         else 
-#             dollar_change = "not found"
-#             url = "https://finance.yahoo.com/quote/"
-#         end
-
-#         if percent_change = stock_change[1] 
-#             percent_change = stock_change[1]
-#         else
-#             percent_change = "not found"
-#             url = "https://finance.yahoo.com/quote/"
-#         end
-
-#         if daily = cost.css('#quote-summary').css("tr").children[9] 
-#             daily = cost.css('#quote-summary').css("tr").children[9].inner_text.split(" ")
-#         else 
-#             daily = "not found"
-#             url = "https://finance.yahoo.com/quote/"
-#         end
-
-#         if daily_low = daily[0] 
-#             daily_low = daily[0]
-#         else
-#             daily_low = "not found"
-#             url = "https://finance.yahoo.com/quote/"
-#         end
-
-#         if daily_high = daily[2] 
-#             daily_high = daily[2]
-#         else
-#             daily_high = "not found"
-#             url = "https://finance.yahoo.com/quote/"
-#         end
-
-#         if fifty_two = cost.css('#quote-summary').css("tr").children[11] 
-#             fifty_two = cost.css('#quote-summary').css("tr").children[11].inner_text.split(" ")
-#         else
-#             fifty_two = "not found"
-#             url = "https://finance.yahoo.com/quote/"
-#         end
-
-#         if fifty_two_low = fifty_two[0] 
-#             fifty_two_low = fifty_two[0]
-#         else
-#             fifty_two_low = "not found"
-#             url = "https://finance.yahoo.com/quote/"
-#         end
-
-#         if fifty_two_high = fifty_two[2] 
-#             fifty_two_high = fifty_two[2]
-#         else
-#             fifty_two_high = "not found"
-#             url = "https://finance.yahoo.com/quote/"
-#         end
-
-#         StockPrice.create(company_id: index + 116, current_price: stock_price, dollar_change: dollar_change, percent_change: percent_change, as_of_time: stock_time, daily_high: daily_high, daily_low: daily_low, fifty_two_week_high: fifty_two_high, fifty_two_week_low: fifty_two_low, transacted: false)
-#         url = "https://finance.yahoo.com/quote/"
-#     }
-#   end
-
-
-#   def stock_scrapper_two_b
-#     sleep 45
-#     url = "https://finance.yahoo.com/quote/"
-#     array = []
-#     stock_tickers_two_b.each_with_index {|stock, index|
-#         sleep 45
-#         url = url.concat(stock)
-#         if cost = Nokogiri::HTML(open(url))
-#             cost = Nokogiri::HTML(open(url))
-#         else
-#             cost = "not found"
-#             url = "https://finance.yahoo.com/quote/"
-#         end
-
-#         if stock_price = cost.css('#quote-header-info').css("span").children[1]
-#             stock_price = cost.css('#quote-header-info').css("span").children[1].inner_text
-#         else 
-#             stock_price = "not found"
-#             url = "https://finance.yahoo.com/quote/"
-#         end
-
-#         if stock_time = cost.css('#quote-market-notice').inner_text 
-#             stock_time = cost.css('#quote-market-notice').inner_text
-#         else 
-#             stock_time = "not found"
-#             url = "https://finance.yahoo.com/quote/"
-#         end
-
-#         if stock_change = cost.css('#quote-header-info').css("span").children[2]
-#             stock_change = cost.css('#quote-header-info').css("span").children[2].inner_text.split(" ")
-#         else 
-#             stock_change = "not found"
-#             url = "https://finance.yahoo.com/quote/"
-#         end
-
-#         if dollar_change = stock_change[0] 
-#             dollar_change = stock_change[0]
-#         else 
-#             dollar_change = "not found"
-#             url = "https://finance.yahoo.com/quote/"
-#         end
-
-#         if percent_change = stock_change[1] 
-#             percent_change = stock_change[1]
-#         else
-#             percent_change = "not found"
-#             url = "https://finance.yahoo.com/quote/"
-#         end
-
-#         if daily = cost.css('#quote-summary').css("tr").children[9] 
-#             daily = cost.css('#quote-summary').css("tr").children[9].inner_text.split(" ")
-#         else 
-#             daily = "not found"
-#             url = "https://finance.yahoo.com/quote/"
-#         end
-
-#         if daily_low = daily[0] 
-#             daily_low = daily[0]
-#         else
-#             daily_low = "not found"
-#             url = "https://finance.yahoo.com/quote/"
-#         end
-
-#         if daily_high = daily[2] 
-#             daily_high = daily[2]
-#         else
-#             daily_high = "not found"
-#             url = "https://finance.yahoo.com/quote/"
-#         end
-
-#         if fifty_two = cost.css('#quote-summary').css("tr").children[11] 
-#             fifty_two = cost.css('#quote-summary').css("tr").children[11].inner_text.split(" ")
-#         else
-#             fifty_two = "not found"
-#             url = "https://finance.yahoo.com/quote/"
-#         end
-
-#         if fifty_two_low = fifty_two[0] 
-#             fifty_two_low = fifty_two[0]
-#         else
-#             fifty_two_low = "not found"
-#             url = "https://finance.yahoo.com/quote/"
-#         end
-
-#         if fifty_two_high = fifty_two[2] 
-#             fifty_two_high = fifty_two[2]
-#         else
-#             fifty_two_high = "not found"
-#             url = "https://finance.yahoo.com/quote/"
-#         end
-
-#         StockPrice.create(company_id: index + 172, current_price: stock_price, dollar_change: dollar_change, percent_change: percent_change, as_of_time: stock_time, daily_high: daily_high, daily_low: daily_low, fifty_two_week_high: fifty_two_high, fifty_two_week_low: fifty_two_low, transacted: false)
-#         url = "https://finance.yahoo.com/quote/"
-#     }
-#   end
-
-
-#   def stock_scrapper_three_a
-#     sleep 45
-#     url = "https://finance.yahoo.com/quote/"
-#     array = []
-#     stock_tickers_three_a.each_with_index {|stock, index|
-#         sleep 45
-#         url = url.concat(stock)
-#         if cost = Nokogiri::HTML(open(url))
-#             cost = Nokogiri::HTML(open(url))
-#         else
-#             cost = "not found"
-#             url = "https://finance.yahoo.com/quote/"
-#         end
-
-#         if stock_price = cost.css('#quote-header-info').css("span").children[1]
-#             stock_price = cost.css('#quote-header-info').css("span").children[1].inner_text
-#         else 
-#             stock_price = "not found"
-#             url = "https://finance.yahoo.com/quote/"
-#         end
-
-#         if stock_time = cost.css('#quote-market-notice').inner_text 
-#             stock_time = cost.css('#quote-market-notice').inner_text
-#         else 
-#             stock_time = "not found"
-#             url = "https://finance.yahoo.com/quote/"
-#         end
-
-#         if stock_change = cost.css('#quote-header-info').css("span").children[2]
-#             stock_change = cost.css('#quote-header-info').css("span").children[2].inner_text.split(" ")
-#         else 
-#             stock_change = "not found"
-#             url = "https://finance.yahoo.com/quote/"
-#         end
-
-#         if dollar_change = stock_change[0] 
-#             dollar_change = stock_change[0]
-#         else 
-#             dollar_change = "not found"
-#             url = "https://finance.yahoo.com/quote/"
-#         end
-
-#         if percent_change = stock_change[1] 
-#             percent_change = stock_change[1]
-#         else
-#             percent_change = "not found"
-#             url = "https://finance.yahoo.com/quote/"
-#         end
-
-#         if daily = cost.css('#quote-summary').css("tr").children[9] 
-#             daily = cost.css('#quote-summary').css("tr").children[9].inner_text.split(" ")
-#         else 
-#             daily = "not found"
-#             url = "https://finance.yahoo.com/quote/"
-#         end
-
-#         if daily_low = daily[0] 
-#             daily_low = daily[0]
-#         else
-#             daily_low = "not found"
-#             url = "https://finance.yahoo.com/quote/"
-#         end
-
-#         if daily_high = daily[2] 
-#             daily_high = daily[2]
-#         else
-#             daily_high = "not found"
-#             url = "https://finance.yahoo.com/quote/"
-#         end
-
-#         if fifty_two = cost.css('#quote-summary').css("tr").children[11] 
-#             fifty_two = cost.css('#quote-summary').css("tr").children[11].inner_text.split(" ")
-#         else
-#             fifty_two = "not found"
-#             url = "https://finance.yahoo.com/quote/"
-#         end
-
-#         if fifty_two_low = fifty_two[0] 
-#             fifty_two_low = fifty_two[0]
-#         else
-#             fifty_two_low = "not found"
-#             url = "https://finance.yahoo.com/quote/"
-#         end
-
-#         if fifty_two_high = fifty_two[2] 
-#             fifty_two_high = fifty_two[2]
-#         else
-#             fifty_two_high = "not found"
-#             url = "https://finance.yahoo.com/quote/"
-#         end
-
-#         StockPrice.create(company_id: index + 231, current_price: stock_price, dollar_change: dollar_change, percent_change: percent_change, as_of_time: stock_time, daily_high: daily_high, daily_low: daily_low, fifty_two_week_high: fifty_two_high, fifty_two_week_low: fifty_two_low, transacted: false)
-#         url = "https://finance.yahoo.com/quote/"
-#     }
-#   end
-
-#   def stock_scrapper_three_b
-#     sleep 45
-#     url = "https://finance.yahoo.com/quote/"
-#     array = []
-#     stock_tickers_three_b.each_with_index {|stock, index|
-#         sleep 45
-#         url = url.concat(stock)
-#         if cost = Nokogiri::HTML(open(url))
-#             cost = Nokogiri::HTML(open(url))
-#         else
-#             cost = "not found"
-#             url = "https://finance.yahoo.com/quote/"
-#         end
-
-#         if stock_price = cost.css('#quote-header-info').css("span").children[1]
-#             stock_price = cost.css('#quote-header-info').css("span").children[1].inner_text
-#         else 
-#             stock_price = "not found"
-#             url = "https://finance.yahoo.com/quote/"
-#         end
-
-#         if stock_time = cost.css('#quote-market-notice').inner_text 
-#             stock_time = cost.css('#quote-market-notice').inner_text
-#         else 
-#             stock_time = "not found"
-#             url = "https://finance.yahoo.com/quote/"
-#         end
-
-#         if stock_change = cost.css('#quote-header-info').css("span").children[2]
-#             stock_change = cost.css('#quote-header-info').css("span").children[2].inner_text.split(" ")
-#         else 
-#             stock_change = "not found"
-#             url = "https://finance.yahoo.com/quote/"
-#         end
-
-#         if dollar_change = stock_change[0] 
-#             dollar_change = stock_change[0]
-#         else 
-#             dollar_change = "not found"
-#             url = "https://finance.yahoo.com/quote/"
-#         end
-
-#         if percent_change = stock_change[1] 
-#             percent_change = stock_change[1]
-#         else
-#             percent_change = "not found"
-#             url = "https://finance.yahoo.com/quote/"
-#         end
-
-#         if daily = cost.css('#quote-summary').css("tr").children[9] 
-#             daily = cost.css('#quote-summary').css("tr").children[9].inner_text.split(" ")
-#         else 
-#             daily = "not found"
-#             url = "https://finance.yahoo.com/quote/"
-#         end
-
-#         if daily_low = daily[0] 
-#             daily_low = daily[0]
-#         else
-#             daily_low = "not found"
-#             url = "https://finance.yahoo.com/quote/"
-#         end
-
-#         if daily_high = daily[2] 
-#             daily_high = daily[2]
-#         else
-#             daily_high = "not found"
-#             url = "https://finance.yahoo.com/quote/"
-#         end
-
-#         if fifty_two = cost.css('#quote-summary').css("tr").children[11] 
-#             fifty_two = cost.css('#quote-summary').css("tr").children[11].inner_text.split(" ")
-#         else
-#             fifty_two = "not found"
-#             url = "https://finance.yahoo.com/quote/"
-#         end
-
-#         if fifty_two_low = fifty_two[0] 
-#             fifty_two_low = fifty_two[0]
-#         else
-#             fifty_two_low = "not found"
-#             url = "https://finance.yahoo.com/quote/"
-#         end
-
-#         if fifty_two_high = fifty_two[2] 
-#             fifty_two_high = fifty_two[2]
-#         else
-#             fifty_two_high = "not found"
-#             url = "https://finance.yahoo.com/quote/"
-#         end
-
-#         StockPrice.create(company_id: index + 288, current_price: stock_price, dollar_change: dollar_change, percent_change: percent_change, as_of_time: stock_time, daily_high: daily_high, daily_low: daily_low, fifty_two_week_high: fifty_two_high, fifty_two_week_low: fifty_two_low, transacted: false)
-#         url = "https://finance.yahoo.com/quote/"
-#     }
-#   end
-
-
-#   def stock_scrapper_four_a
-#     sleep 45
-#     url = "https://finance.yahoo.com/quote/"
-#     array = []
-#     stock_tickers_four_a.each_with_index {|stock, index|
-#         sleep 45
-#         url = url.concat(stock)
-#         if cost = Nokogiri::HTML(open(url))
-#             cost = Nokogiri::HTML(open(url))
-#         else
-#             cost = "not found"
-#             url = "https://finance.yahoo.com/quote/"
-#         end
-
-#         if stock_price = cost.css('#quote-header-info').css("span").children[1]
-#             stock_price = cost.css('#quote-header-info').css("span").children[1].inner_text
-#         else 
-#             stock_price = "not found"
-#             url = "https://finance.yahoo.com/quote/"
-#         end
-
-#         if stock_time = cost.css('#quote-market-notice').inner_text 
-#             stock_time = cost.css('#quote-market-notice').inner_text
-#         else 
-#             stock_time = "not found"
-#             url = "https://finance.yahoo.com/quote/"
-#         end
-
-#         if stock_change = cost.css('#quote-header-info').css("span").children[2]
-#             stock_change = cost.css('#quote-header-info').css("span").children[2].inner_text.split(" ")
-#         else 
-#             stock_change = "not found"
-#             url = "https://finance.yahoo.com/quote/"
-#         end
-
-#         if dollar_change = stock_change[0] 
-#             dollar_change = stock_change[0]
-#         else 
-#             dollar_change = "not found"
-#             url = "https://finance.yahoo.com/quote/"
-#         end
-
-#         if percent_change = stock_change[1] 
-#             percent_change = stock_change[1]
-#         else
-#             percent_change = "not found"
-#             url = "https://finance.yahoo.com/quote/"
-#         end
-
-#         if daily = cost.css('#quote-summary').css("tr").children[9] 
-#             daily = cost.css('#quote-summary').css("tr").children[9].inner_text.split(" ")
-#         else 
-#             daily = "not found"
-#             url = "https://finance.yahoo.com/quote/"
-#         end
-
-#         if daily_low = daily[0] 
-#             daily_low = daily[0]
-#         else
-#             daily_low = "not found"
-#             url = "https://finance.yahoo.com/quote/"
-#         end
-
-#         if daily_high = daily[2] 
-#             daily_high = daily[2]
-#         else
-#             daily_high = "not found"
-#             url = "https://finance.yahoo.com/quote/"
-#         end
-
-#         if fifty_two = cost.css('#quote-summary').css("tr").children[11] 
-#             fifty_two = cost.css('#quote-summary').css("tr").children[11].inner_text.split(" ")
-#         else
-#             fifty_two = "not found"
-#             url = "https://finance.yahoo.com/quote/"
-#         end
-
-#         if fifty_two_low = fifty_two[0] 
-#             fifty_two_low = fifty_two[0]
-#         else
-#             fifty_two_low = "not found"
-#             url = "https://finance.yahoo.com/quote/"
-#         end
-
-#         if fifty_two_high = fifty_two[2] 
-#             fifty_two_high = fifty_two[2]
-#         else
-#             fifty_two_high = "not found"
-#             url = "https://finance.yahoo.com/quote/"
-#         end
-
-#         StockPrice.create(company_id: index + 345, current_price: stock_price, dollar_change: dollar_change, percent_change: percent_change, as_of_time: stock_time, daily_high: daily_high, daily_low: daily_low, fifty_two_week_high: fifty_two_high, fifty_two_week_low: fifty_two_low, transacted: false)
-#         url = "https://finance.yahoo.com/quote/"
-#     }
-#   end
-
-#   def stock_scrapper_four_b
-#     sleep 45
-#     url = "https://finance.yahoo.com/quote/"
-#     array = []
-#     stock_tickers_four_b.each_with_index {|stock, index|
-#         sleep 45
-#         url = url.concat(stock)
-#         if cost = Nokogiri::HTML(open(url))
-#             cost = Nokogiri::HTML(open(url))
-#         else
-#             cost = "not found"
-#             url = "https://finance.yahoo.com/quote/"
-#         end
-
-#         if stock_price = cost.css('#quote-header-info').css("span").children[1]
-#             stock_price = cost.css('#quote-header-info').css("span").children[1].inner_text
-#         else 
-#             stock_price = "not found"
-#             url = "https://finance.yahoo.com/quote/"
-#         end
-
-#         if stock_time = cost.css('#quote-market-notice').inner_text 
-#             stock_time = cost.css('#quote-market-notice').inner_text
-#         else 
-#             stock_time = "not found"
-#             url = "https://finance.yahoo.com/quote/"
-#         end
-
-#         if stock_change = cost.css('#quote-header-info').css("span").children[2]
-#             stock_change = cost.css('#quote-header-info').css("span").children[2].inner_text.split(" ")
-#         else 
-#             stock_change = "not found"
-#             url = "https://finance.yahoo.com/quote/"
-#         end
-
-#         if dollar_change = stock_change[0] 
-#             dollar_change = stock_change[0]
-#         else 
-#             dollar_change = "not found"
-#             url = "https://finance.yahoo.com/quote/"
-#         end
-
-#         if percent_change = stock_change[1] 
-#             percent_change = stock_change[1]
-#         else
-#             percent_change = "not found"
-#             url = "https://finance.yahoo.com/quote/"
-#         end
-
-#         if daily = cost.css('#quote-summary').css("tr").children[9] 
-#             daily = cost.css('#quote-summary').css("tr").children[9].inner_text.split(" ")
-#         else 
-#             daily = "not found"
-#             url = "https://finance.yahoo.com/quote/"
-#         end
-
-#         if daily_low = daily[0] 
-#             daily_low = daily[0]
-#         else
-#             daily_low = "not found"
-#             url = "https://finance.yahoo.com/quote/"
-#         end
-
-#         if daily_high = daily[2] 
-#             daily_high = daily[2]
-#         else
-#             daily_high = "not found"
-#             url = "https://finance.yahoo.com/quote/"
-#         end
-
-#         if fifty_two = cost.css('#quote-summary').css("tr").children[11] 
-#             fifty_two = cost.css('#quote-summary').css("tr").children[11].inner_text.split(" ")
-#         else
-#             fifty_two = "not found"
-#             url = "https://finance.yahoo.com/quote/"
-#         end
-
-#         if fifty_two_low = fifty_two[0] 
-#             fifty_two_low = fifty_two[0]
-#         else
-#             fifty_two_low = "not found"
-#             url = "https://finance.yahoo.com/quote/"
-#         end
-
-#         if fifty_two_high = fifty_two[2] 
-#             fifty_two_high = fifty_two[2]
-#         else
-#             fifty_two_high = "not found"
-#             url = "https://finance.yahoo.com/quote/"
-#         end
-
-#         StockPrice.create(company_id: index + 402, current_price: stock_price, dollar_change: dollar_change, percent_change: percent_change, as_of_time: stock_time, daily_high: daily_high, daily_low: daily_low, fifty_two_week_high: fifty_two_high, fifty_two_week_low: fifty_two_low, transacted: false)
-#         url = "https://finance.yahoo.com/quote/"
-#     }
-#   end
-
-
-#   def stock_scrapper_five
-#     sleep 45
-#     url = "https://finance.yahoo.com/quote/"
-#     array = []
-#     stock_tickers_five.each_with_index {|stock, index|
-#         sleep 45
-#         url = url.concat(stock)
-#         if cost = Nokogiri::HTML(open(url))
-#             cost = Nokogiri::HTML(open(url))
-#         else
-#             cost = "not found"
-#             url = "https://finance.yahoo.com/quote/"
-#         end
-
-#         if stock_price = cost.css('#quote-header-info').css("span").children[1]
-#             stock_price = cost.css('#quote-header-info').css("span").children[1].inner_text
-#         else 
-#             stock_price = "not found"
-#             url = "https://finance.yahoo.com/quote/"
-#         end
-
-#         if stock_time = cost.css('#quote-market-notice').inner_text 
-#             stock_time = cost.css('#quote-market-notice').inner_text
-#         else 
-#             stock_time = "not found"
-#             url = "https://finance.yahoo.com/quote/"
-#         end
-
-#         if stock_change = cost.css('#quote-header-info').css("span").children[2]
-#             stock_change = cost.css('#quote-header-info').css("span").children[2].inner_text.split(" ")
-#         else 
-#             stock_change = "not found"
-#             url = "https://finance.yahoo.com/quote/"
-#         end
-
-#         if dollar_change = stock_change[0] 
-#             dollar_change = stock_change[0]
-#         else 
-#             dollar_change = "not found"
-#             url = "https://finance.yahoo.com/quote/"
-#         end
-
-#         if percent_change = stock_change[1] 
-#             percent_change = stock_change[1]
-#         else
-#             percent_change = "not found"
-#             url = "https://finance.yahoo.com/quote/"
-#         end
-
-#         if daily = cost.css('#quote-summary').css("tr").children[9] 
-#             daily = cost.css('#quote-summary').css("tr").children[9].inner_text.split(" ")
-#         else 
-#             daily = "not found"
-#             url = "https://finance.yahoo.com/quote/"
-#         end
-
-#         if daily_low = daily[0] 
-#             daily_low = daily[0]
-#         else
-#             daily_low = "not found"
-#             url = "https://finance.yahoo.com/quote/"
-#         end
-
-#         if daily_high = daily[2] 
-#             daily_high = daily[2]
-#         else
-#             daily_high = "not found"
-#             url = "https://finance.yahoo.com/quote/"
-#         end
-
-#         if fifty_two = cost.css('#quote-summary').css("tr").children[11] 
-#             fifty_two = cost.css('#quote-summary').css("tr").children[11].inner_text.split(" ")
-#         else
-#             fifty_two = "not found"
-#             url = "https://finance.yahoo.com/quote/"
-#         end
-
-#         if fifty_two_low = fifty_two[0] 
-#             fifty_two_low = fifty_two[0]
-#         else
-#             fifty_two_low = "not found"
-#             url = "https://finance.yahoo.com/quote/"
-#         end
-
-#         if fifty_two_high = fifty_two[2] 
-#             fifty_two_high = fifty_two[2]
-#         else
-#             fifty_two_high = "not found"
-#             url = "https://finance.yahoo.com/quote/"
-#         end
-
-#         StockPrice.create(company_id: index + 458, current_price: stock_price, dollar_change: dollar_change, percent_change: percent_change, as_of_time: stock_time, daily_high: daily_high, daily_low: daily_low, fifty_two_week_high: fifty_two_high, fifty_two_week_low: fifty_two_low, transacted: false)
-#         url = "https://finance.yahoo.com/quote/"
-#     }
-#   end
-
-
-stock_scrapper
+# stock_scrapper
+
+def stock_tickers_one_a
+    [ 'MMM','ABT','ABBV','ABMD','ACN','ATVI','ADBE','AMD','AAP','AES','AFL','A','APD','AKAM','ALK','ALB','ARE','ALXN','ALGN','ALLE','LNT','ALL','GOOGL','GOOG','MO','AMZN','AMCR','AEE','AAL','AEP','AXP','AIG','AMT','AWK','AMP','ABC','AME','AMGN','APH','ADI','ANSS','ANTM','AON','AOS','APA','AIV','AAPL','AMAT','APTV','ADM','ANET','AJG','AIZ','T','ATO','ADSK','ADP']
+end
+
+def stock_tickers_one_b
+        ['AZO','AVB','AVY','BKR','BLL','BAC','BK','BAX','BDX','BRK-B','BBY','BIIB','BIO','BLK','BA','BKNG','BWA','BXP','BSX','BMY','AVGO','BR','BF-B','CHRW','COG','CDNS','CPB','COF','CAH','KMX','CCL','CARR','CAT','CBOE','CBRE','CDW','CE','CNC','CNP','CTL','CERN','CF','SCHW','CHTR','CVX','CMG', 'CB','CHD','CI','CINF','CTAS','CSCO','C','CFG','CTXS','CLX','CME','CMS']
+end       
+
+def stock_tickers_two_a
+        ['KO','CTSH','CL', 'CMCSA','CMA','CAG','CXO','COP','ED','STZ','COO','CPRT','GLW','CTVA','COST','COTY','CCI','CSX','CMI','CVS','DHI','DHR','DRI','DVA','DE','DAL','XRAY','DVN','DXCM','FANG','DLR','DFS','DISCA','DISCK','DISH','DG','DLTR','D','DPZ','DOV','DOW','DTE','DUK','DRE','DD','DXC','ETFC','EMN','ETN','EBAY','ECL','EIX','EW','EA','EMR','ETR']
+end
+
+def stock_tickers_two_b
+    ['EOG','EFX','EQIX','EQR','ESS','EL','EVRG','ES','RE','EXC','EXPE','EXPD','EXR','XOM','FFIV','FB','FAST','FRT','FDX','FIS','FITB','FE','FRC','FISV','FLT','FLIR','FLS','FMC','F','FTNT','FTV','FBHS','FOXA','FOX','BEN','FCX','GPS','GRMN','IT','GD','GE','GIS','GM','GPC','GILD','GL','GPN','GS','GWW','HRB','HAL','HBI','HIG','HAS','HCA','PEAK','HSIC','HSY','HES']
+end
+
+def stock_tickers_three_a
+        ['HPE','HLT','HFC','HOLX','HD','HON','HRL','HST','HWM','HPQ','HUM','HBAN','HII','IEX','IDXX','INFO','ITW','ILMN','INCY','IR','INTC','ICE','IBM','IP','IPG','IFF','INTU','ISRG','IVZ','IPGP','IQV','IRM','JKHY','J','JBHT','SJM','JNJ','JCI','JPM','JNPR','KSU','K','KEY','KEYS','KMB','KIM','KMI','KLAC','KSS','KHC','KR','LB','LHX','LH','LRCX','LW','LVS']
+end
+
+def stock_tickers_three_b
+    ['LEG','LDOS','LEN','LLY','LNC','LIN','LYV','LKQ','LMT','L','LOW','LYB','MTB','MRO','MPC','MKTX','MAR','MMC','MLM','MAS','MA','MKC','MXIM','MCD','MCK','MDT','MRK','MET','MTD','MGM','MCHP','MU','MSFT','MAA','MHK','TAP','MDLZ','MNST','MCO','MS','MOS','MSI','MSCI','MYL','NDAQ','NOV','NTAP','NFLX','NWL','NEM','NWSA','NWS','NEE','NLSN','NKE','NI','NBL']
+end
+
+def stock_tickers_four_a
+        ['NSC','NTRS','NOC','NLOK','NCLH','NRG','NUE','NVDA','NVR','ORLY','OXY','ODFL','OMC','OKE','ORCL','OTIS','PCAR','PKG','PH','PAYX','PAYC','PYPL','PNR','PBCT','PEP','PKI','PRGO','PFE','PM','PSX','PNW','PXD','PNC','PPG','PPL','PFG','PG','PGR','PLD','PRU','PEG','PSA','PHM','PVH','QRVO','PWR','QCOM','DGX','RL','RJF','RTX','O','REG','REGN','RF','RSG','RMD']
+end
+
+def stock_tickers_four_b
+    ['RHI','ROK','ROL','ROP','ROST','RCL','SPGI','CRM','SBAC','SLB','STX','SEE','SRE','NOW','SHW','SPG','SWKS','SLG','SNA','SO','LUV','SWK','SBUX','STT','STE','SYK','SIVB','SYF','SNPS','SYY','TMUS','TROW','TTWO','TPR','TGT','TEL','FTI','TFX','TXN','TXT','TMO','TIF','TJX','TSCO','TT','TDG','TDY','TRV','TFC','TWTR','TSN','TYL','UDR','ULTA','USB','UAA']
+end
+
+def stock_tickers_five
+        ['UA','UNP','UAL','UNH','UPS','URI','UHS','UNM','VFC','VLO','VAR','VTR','VRSN','VRSK','VZ','VRTX','VIAC','V','VNO','VMC','WRB','WAB','WMT','WBA','DIS','WM', 'WAT','WEC','WFC','WELL','WST','WDC','WU','WRK','WY','WHR','WMB','WLTW','WYNN','XEL','XRX','XLNX','XYL','YUM','ZBRA','ZBH','ZION','ZTS']
+end
+
+def stock_scrapper_one_a
+    url = "https://finance.yahoo.com/quote/"
+    array = []
+    stock_tickers_one_a.each_with_index {|stock, index|
+        sleep 1
+        url = url.concat(stock)
+        if cost = Nokogiri::HTML(open(url))
+            cost = Nokogiri::HTML(open(url))
+        else
+            cost = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if stock_price = cost.css('#quote-header-info').css("span").children[1]
+            stock_price = cost.css('#quote-header-info').css("span").children[1].inner_text
+        else 
+            stock_price = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if stock_time = cost.css('#quote-market-notice').inner_text 
+            stock_time = cost.css('#quote-market-notice').inner_text
+        else 
+            stock_time = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if stock_change = cost.css('#quote-header-info').css("span").children[2]
+            stock_change = cost.css('#quote-header-info').css("span").children[2].inner_text.split(" ")
+        else 
+            stock_change = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if dollar_change = stock_change[0] 
+            dollar_change = stock_change[0]
+        else 
+            dollar_change = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if percent_change = stock_change[1] 
+            percent_change = stock_change[1]
+        else
+            percent_change = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if daily = cost.css('#quote-summary').css("tr").children[9] 
+            daily = cost.css('#quote-summary').css("tr").children[9].inner_text.split(" ")
+        else 
+            daily = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if daily_low = daily[0] 
+            daily_low = daily[0]
+        else
+            daily_low = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if daily_high = daily[2] 
+            daily_high = daily[2]
+        else
+            daily_high = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if fifty_two = cost.css('#quote-summary').css("tr").children[11] 
+            fifty_two = cost.css('#quote-summary').css("tr").children[11].inner_text.split(" ")
+        else
+            fifty_two = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if fifty_two_low = fifty_two[0] 
+            fifty_two_low = fifty_two[0]
+        else
+            fifty_two_low = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if fifty_two_high = fifty_two[2] 
+            fifty_two_high = fifty_two[2]
+        else
+            fifty_two_high = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        StockPrice.create(company_id: index + 1, current_price: stock_price, dollar_change: dollar_change, percent_change: percent_change, as_of_time: stock_time, daily_high: daily_high, daily_low: daily_low, fifty_two_week_high: fifty_two_high, fifty_two_week_low: fifty_two_low, transacted: false)
+        url = "https://finance.yahoo.com/quote/"
+    }
+  end
+
+  def stock_scrapper_one_b
+    sleep 15
+    url = "https://finance.yahoo.com/quote/"
+    array = []
+    stock_tickers_one_b.each_with_index {|stock, index|
+        sleep 1
+        url = url.concat(stock)
+        if cost = Nokogiri::HTML(open(url))
+            cost = Nokogiri::HTML(open(url))
+        else
+            cost = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if stock_price = cost.css('#quote-header-info').css("span").children[1]
+            stock_price = cost.css('#quote-header-info').css("span").children[1].inner_text
+        else 
+            stock_price = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if stock_time = cost.css('#quote-market-notice').inner_text 
+            stock_time = cost.css('#quote-market-notice').inner_text
+        else 
+            stock_time = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if stock_change = cost.css('#quote-header-info').css("span").children[2]
+            stock_change = cost.css('#quote-header-info').css("span").children[2].inner_text.split(" ")
+        else 
+            stock_change = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if dollar_change = stock_change[0] 
+            dollar_change = stock_change[0]
+        else 
+            dollar_change = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if percent_change = stock_change[1] 
+            percent_change = stock_change[1]
+        else
+            percent_change = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if daily = cost.css('#quote-summary').css("tr").children[9] 
+            daily = cost.css('#quote-summary').css("tr").children[9].inner_text.split(" ")
+        else 
+            daily = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if daily_low = daily[0] 
+            daily_low = daily[0]
+        else
+            daily_low = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if daily_high = daily[2] 
+            daily_high = daily[2]
+        else
+            daily_high = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if fifty_two = cost.css('#quote-summary').css("tr").children[11] 
+            fifty_two = cost.css('#quote-summary').css("tr").children[11].inner_text.split(" ")
+        else
+            fifty_two = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if fifty_two_low = fifty_two[0] 
+            fifty_two_low = fifty_two[0]
+        else
+            fifty_two_low = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if fifty_two_high = fifty_two[2] 
+            fifty_two_high = fifty_two[2]
+        else
+            fifty_two_high = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        StockPrice.create(company_id: index + 58, current_price: stock_price, dollar_change: dollar_change, percent_change: percent_change, as_of_time: stock_time, daily_high: daily_high, daily_low: daily_low, fifty_two_week_high: fifty_two_high, fifty_two_week_low: fifty_two_low, transacted: false)
+        url = "https://finance.yahoo.com/quote/"
+    }
+  end
+
+
+  def stock_scrapper_two_a
+    sleep 15
+    url = "https://finance.yahoo.com/quote/"
+    array = []
+    stock_tickers_two_a.each_with_index {|stock, index|
+        sleep 1
+        url = url.concat(stock)
+        if cost = Nokogiri::HTML(open(url))
+            cost = Nokogiri::HTML(open(url))
+        else
+            cost = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if stock_price = cost.css('#quote-header-info').css("span").children[1]
+            stock_price = cost.css('#quote-header-info').css("span").children[1].inner_text
+        else 
+            stock_price = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if stock_time = cost.css('#quote-market-notice').inner_text 
+            stock_time = cost.css('#quote-market-notice').inner_text
+        else 
+            stock_time = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if stock_change = cost.css('#quote-header-info').css("span").children[2]
+            stock_change = cost.css('#quote-header-info').css("span").children[2].inner_text.split(" ")
+        else 
+            stock_change = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if dollar_change = stock_change[0] 
+            dollar_change = stock_change[0]
+        else 
+            dollar_change = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if percent_change = stock_change[1] 
+            percent_change = stock_change[1]
+        else
+            percent_change = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if daily = cost.css('#quote-summary').css("tr").children[9] 
+            daily = cost.css('#quote-summary').css("tr").children[9].inner_text.split(" ")
+        else 
+            daily = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if daily_low = daily[0] 
+            daily_low = daily[0]
+        else
+            daily_low = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if daily_high = daily[2] 
+            daily_high = daily[2]
+        else
+            daily_high = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if fifty_two = cost.css('#quote-summary').css("tr").children[11] 
+            fifty_two = cost.css('#quote-summary').css("tr").children[11].inner_text.split(" ")
+        else
+            fifty_two = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if fifty_two_low = fifty_two[0] 
+            fifty_two_low = fifty_two[0]
+        else
+            fifty_two_low = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if fifty_two_high = fifty_two[2] 
+            fifty_two_high = fifty_two[2]
+        else
+            fifty_two_high = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        StockPrice.create(company_id: index + 116, current_price: stock_price, dollar_change: dollar_change, percent_change: percent_change, as_of_time: stock_time, daily_high: daily_high, daily_low: daily_low, fifty_two_week_high: fifty_two_high, fifty_two_week_low: fifty_two_low, transacted: false)
+        url = "https://finance.yahoo.com/quote/"
+    }
+  end
+
+
+  def stock_scrapper_two_b
+    sleep 15
+    url = "https://finance.yahoo.com/quote/"
+    array = []
+    stock_tickers_two_b.each_with_index {|stock, index|
+        sleep 1
+        url = url.concat(stock)
+        if cost = Nokogiri::HTML(open(url))
+            cost = Nokogiri::HTML(open(url))
+        else
+            cost = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if stock_price = cost.css('#quote-header-info').css("span").children[1]
+            stock_price = cost.css('#quote-header-info').css("span").children[1].inner_text
+        else 
+            stock_price = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if stock_time = cost.css('#quote-market-notice').inner_text 
+            stock_time = cost.css('#quote-market-notice').inner_text
+        else 
+            stock_time = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if stock_change = cost.css('#quote-header-info').css("span").children[2]
+            stock_change = cost.css('#quote-header-info').css("span").children[2].inner_text.split(" ")
+        else 
+            stock_change = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if dollar_change = stock_change[0] 
+            dollar_change = stock_change[0]
+        else 
+            dollar_change = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if percent_change = stock_change[1] 
+            percent_change = stock_change[1]
+        else
+            percent_change = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if daily = cost.css('#quote-summary').css("tr").children[9] 
+            daily = cost.css('#quote-summary').css("tr").children[9].inner_text.split(" ")
+        else 
+            daily = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if daily_low = daily[0] 
+            daily_low = daily[0]
+        else
+            daily_low = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if daily_high = daily[2] 
+            daily_high = daily[2]
+        else
+            daily_high = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if fifty_two = cost.css('#quote-summary').css("tr").children[11] 
+            fifty_two = cost.css('#quote-summary').css("tr").children[11].inner_text.split(" ")
+        else
+            fifty_two = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if fifty_two_low = fifty_two[0] 
+            fifty_two_low = fifty_two[0]
+        else
+            fifty_two_low = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if fifty_two_high = fifty_two[2] 
+            fifty_two_high = fifty_two[2]
+        else
+            fifty_two_high = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        StockPrice.create(company_id: index + 172, current_price: stock_price, dollar_change: dollar_change, percent_change: percent_change, as_of_time: stock_time, daily_high: daily_high, daily_low: daily_low, fifty_two_week_high: fifty_two_high, fifty_two_week_low: fifty_two_low, transacted: false)
+        url = "https://finance.yahoo.com/quote/"
+    }
+  end
+
+
+  def stock_scrapper_three_a
+    sleep 15
+    url = "https://finance.yahoo.com/quote/"
+    array = []
+    stock_tickers_three_a.each_with_index {|stock, index|
+        sleep 1
+        url = url.concat(stock)
+        if cost = Nokogiri::HTML(open(url))
+            cost = Nokogiri::HTML(open(url))
+        else
+            cost = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if stock_price = cost.css('#quote-header-info').css("span").children[1]
+            stock_price = cost.css('#quote-header-info').css("span").children[1].inner_text
+        else 
+            stock_price = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if stock_time = cost.css('#quote-market-notice').inner_text 
+            stock_time = cost.css('#quote-market-notice').inner_text
+        else 
+            stock_time = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if stock_change = cost.css('#quote-header-info').css("span").children[2]
+            stock_change = cost.css('#quote-header-info').css("span").children[2].inner_text.split(" ")
+        else 
+            stock_change = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if dollar_change = stock_change[0] 
+            dollar_change = stock_change[0]
+        else 
+            dollar_change = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if percent_change = stock_change[1] 
+            percent_change = stock_change[1]
+        else
+            percent_change = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if daily = cost.css('#quote-summary').css("tr").children[9] 
+            daily = cost.css('#quote-summary').css("tr").children[9].inner_text.split(" ")
+        else 
+            daily = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if daily_low = daily[0] 
+            daily_low = daily[0]
+        else
+            daily_low = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if daily_high = daily[2] 
+            daily_high = daily[2]
+        else
+            daily_high = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if fifty_two = cost.css('#quote-summary').css("tr").children[11] 
+            fifty_two = cost.css('#quote-summary').css("tr").children[11].inner_text.split(" ")
+        else
+            fifty_two = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if fifty_two_low = fifty_two[0] 
+            fifty_two_low = fifty_two[0]
+        else
+            fifty_two_low = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if fifty_two_high = fifty_two[2] 
+            fifty_two_high = fifty_two[2]
+        else
+            fifty_two_high = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        StockPrice.create(company_id: index + 231, current_price: stock_price, dollar_change: dollar_change, percent_change: percent_change, as_of_time: stock_time, daily_high: daily_high, daily_low: daily_low, fifty_two_week_high: fifty_two_high, fifty_two_week_low: fifty_two_low, transacted: false)
+        url = "https://finance.yahoo.com/quote/"
+    }
+  end
+
+  def stock_scrapper_three_b
+    sleep 15
+    url = "https://finance.yahoo.com/quote/"
+    array = []
+    stock_tickers_three_b.each_with_index {|stock, index|
+        sleep 1
+        url = url.concat(stock)
+        if cost = Nokogiri::HTML(open(url))
+            cost = Nokogiri::HTML(open(url))
+        else
+            cost = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if stock_price = cost.css('#quote-header-info').css("span").children[1]
+            stock_price = cost.css('#quote-header-info').css("span").children[1].inner_text
+        else 
+            stock_price = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if stock_time = cost.css('#quote-market-notice').inner_text 
+            stock_time = cost.css('#quote-market-notice').inner_text
+        else 
+            stock_time = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if stock_change = cost.css('#quote-header-info').css("span").children[2]
+            stock_change = cost.css('#quote-header-info').css("span").children[2].inner_text.split(" ")
+        else 
+            stock_change = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if dollar_change = stock_change[0] 
+            dollar_change = stock_change[0]
+        else 
+            dollar_change = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if percent_change = stock_change[1] 
+            percent_change = stock_change[1]
+        else
+            percent_change = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if daily = cost.css('#quote-summary').css("tr").children[9] 
+            daily = cost.css('#quote-summary').css("tr").children[9].inner_text.split(" ")
+        else 
+            daily = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if daily_low = daily[0] 
+            daily_low = daily[0]
+        else
+            daily_low = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if daily_high = daily[2] 
+            daily_high = daily[2]
+        else
+            daily_high = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if fifty_two = cost.css('#quote-summary').css("tr").children[11] 
+            fifty_two = cost.css('#quote-summary').css("tr").children[11].inner_text.split(" ")
+        else
+            fifty_two = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if fifty_two_low = fifty_two[0] 
+            fifty_two_low = fifty_two[0]
+        else
+            fifty_two_low = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if fifty_two_high = fifty_two[2] 
+            fifty_two_high = fifty_two[2]
+        else
+            fifty_two_high = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        StockPrice.create(company_id: index + 288, current_price: stock_price, dollar_change: dollar_change, percent_change: percent_change, as_of_time: stock_time, daily_high: daily_high, daily_low: daily_low, fifty_two_week_high: fifty_two_high, fifty_two_week_low: fifty_two_low, transacted: false)
+        url = "https://finance.yahoo.com/quote/"
+    }
+  end
+
+
+  def stock_scrapper_four_a
+    sleep 15
+    url = "https://finance.yahoo.com/quote/"
+    array = []
+    stock_tickers_four_a.each_with_index {|stock, index|
+        sleep 1
+        url = url.concat(stock)
+        if cost = Nokogiri::HTML(open(url))
+            cost = Nokogiri::HTML(open(url))
+        else
+            cost = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if stock_price = cost.css('#quote-header-info').css("span").children[1]
+            stock_price = cost.css('#quote-header-info').css("span").children[1].inner_text
+        else 
+            stock_price = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if stock_time = cost.css('#quote-market-notice').inner_text 
+            stock_time = cost.css('#quote-market-notice').inner_text
+        else 
+            stock_time = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if stock_change = cost.css('#quote-header-info').css("span").children[2]
+            stock_change = cost.css('#quote-header-info').css("span").children[2].inner_text.split(" ")
+        else 
+            stock_change = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if dollar_change = stock_change[0] 
+            dollar_change = stock_change[0]
+        else 
+            dollar_change = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if percent_change = stock_change[1] 
+            percent_change = stock_change[1]
+        else
+            percent_change = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if daily = cost.css('#quote-summary').css("tr").children[9] 
+            daily = cost.css('#quote-summary').css("tr").children[9].inner_text.split(" ")
+        else 
+            daily = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if daily_low = daily[0] 
+            daily_low = daily[0]
+        else
+            daily_low = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if daily_high = daily[2] 
+            daily_high = daily[2]
+        else
+            daily_high = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if fifty_two = cost.css('#quote-summary').css("tr").children[11] 
+            fifty_two = cost.css('#quote-summary').css("tr").children[11].inner_text.split(" ")
+        else
+            fifty_two = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if fifty_two_low = fifty_two[0] 
+            fifty_two_low = fifty_two[0]
+        else
+            fifty_two_low = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if fifty_two_high = fifty_two[2] 
+            fifty_two_high = fifty_two[2]
+        else
+            fifty_two_high = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        StockPrice.create(company_id: index + 345, current_price: stock_price, dollar_change: dollar_change, percent_change: percent_change, as_of_time: stock_time, daily_high: daily_high, daily_low: daily_low, fifty_two_week_high: fifty_two_high, fifty_two_week_low: fifty_two_low, transacted: false)
+        url = "https://finance.yahoo.com/quote/"
+    }
+  end
+
+  def stock_scrapper_four_b
+    sleep 15
+    url = "https://finance.yahoo.com/quote/"
+    array = []
+    stock_tickers_four_b.each_with_index {|stock, index|
+        sleep 1
+        url = url.concat(stock)
+        if cost = Nokogiri::HTML(open(url))
+            cost = Nokogiri::HTML(open(url))
+        else
+            cost = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if stock_price = cost.css('#quote-header-info').css("span").children[1]
+            stock_price = cost.css('#quote-header-info').css("span").children[1].inner_text
+        else 
+            stock_price = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if stock_time = cost.css('#quote-market-notice').inner_text 
+            stock_time = cost.css('#quote-market-notice').inner_text
+        else 
+            stock_time = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if stock_change = cost.css('#quote-header-info').css("span").children[2]
+            stock_change = cost.css('#quote-header-info').css("span").children[2].inner_text.split(" ")
+        else 
+            stock_change = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if dollar_change = stock_change[0] 
+            dollar_change = stock_change[0]
+        else 
+            dollar_change = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if percent_change = stock_change[1] 
+            percent_change = stock_change[1]
+        else
+            percent_change = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if daily = cost.css('#quote-summary').css("tr").children[9] 
+            daily = cost.css('#quote-summary').css("tr").children[9].inner_text.split(" ")
+        else 
+            daily = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if daily_low = daily[0] 
+            daily_low = daily[0]
+        else
+            daily_low = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if daily_high = daily[2] 
+            daily_high = daily[2]
+        else
+            daily_high = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if fifty_two = cost.css('#quote-summary').css("tr").children[11] 
+            fifty_two = cost.css('#quote-summary').css("tr").children[11].inner_text.split(" ")
+        else
+            fifty_two = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if fifty_two_low = fifty_two[0] 
+            fifty_two_low = fifty_two[0]
+        else
+            fifty_two_low = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if fifty_two_high = fifty_two[2] 
+            fifty_two_high = fifty_two[2]
+        else
+            fifty_two_high = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        StockPrice.create(company_id: index + 402, current_price: stock_price, dollar_change: dollar_change, percent_change: percent_change, as_of_time: stock_time, daily_high: daily_high, daily_low: daily_low, fifty_two_week_high: fifty_two_high, fifty_two_week_low: fifty_two_low, transacted: false)
+        url = "https://finance.yahoo.com/quote/"
+    }
+  end
+
+
+  def stock_scrapper_five
+    sleep 15
+    url = "https://finance.yahoo.com/quote/"
+    array = []
+    stock_tickers_five.each_with_index {|stock, index|
+        sleep 1
+        url = url.concat(stock)
+        if cost = Nokogiri::HTML(open(url))
+            cost = Nokogiri::HTML(open(url))
+        else
+            cost = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if stock_price = cost.css('#quote-header-info').css("span").children[1]
+            stock_price = cost.css('#quote-header-info').css("span").children[1].inner_text
+        else 
+            stock_price = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if stock_time = cost.css('#quote-market-notice').inner_text 
+            stock_time = cost.css('#quote-market-notice').inner_text
+        else 
+            stock_time = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if stock_change = cost.css('#quote-header-info').css("span").children[2]
+            stock_change = cost.css('#quote-header-info').css("span").children[2].inner_text.split(" ")
+        else 
+            stock_change = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if dollar_change = stock_change[0] 
+            dollar_change = stock_change[0]
+        else 
+            dollar_change = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if percent_change = stock_change[1] 
+            percent_change = stock_change[1]
+        else
+            percent_change = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if daily = cost.css('#quote-summary').css("tr").children[9] 
+            daily = cost.css('#quote-summary').css("tr").children[9].inner_text.split(" ")
+        else 
+            daily = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if daily_low = daily[0] 
+            daily_low = daily[0]
+        else
+            daily_low = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if daily_high = daily[2] 
+            daily_high = daily[2]
+        else
+            daily_high = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if fifty_two = cost.css('#quote-summary').css("tr").children[11] 
+            fifty_two = cost.css('#quote-summary').css("tr").children[11].inner_text.split(" ")
+        else
+            fifty_two = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if fifty_two_low = fifty_two[0] 
+            fifty_two_low = fifty_two[0]
+        else
+            fifty_two_low = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        if fifty_two_high = fifty_two[2] 
+            fifty_two_high = fifty_two[2]
+        else
+            fifty_two_high = "not found"
+            url = "https://finance.yahoo.com/quote/"
+        end
+
+        StockPrice.create(company_id: index + 458, current_price: stock_price, dollar_change: dollar_change, percent_change: percent_change, as_of_time: stock_time, daily_high: daily_high, daily_low: daily_low, fifty_two_week_high: fifty_two_high, fifty_two_week_low: fifty_two_low, transacted: false)
+        url = "https://finance.yahoo.com/quote/"
+    }
+  end
+
+
+
 # stock_scrapper_one_a
 # stock_scrapper_one_b
 # stock_scrapper_two_a
@@ -1583,28 +1568,11 @@ stock_scrapper
 
 
 #Transactions
+# Transaction.destroy_all
+# 200.times do
+#     Transaction.create(stock_price_id: rand(1389...1893), portfolio_id: rand(1...15), buy_sell: "buy", quantity: rand(1...10))
+# end
 
-# t_1 = Transaction.new(stock_price_id: rand(1..505), portfolio_id: rand(1..15), buy_sell: "buy", quantity: rand(1..10), purchase_price: rand(5..150))
-# t_1 = Transaction.new(stock_price_id: rand(1..505), portfolio_id: rand(1..15), buy_sell: "buy", quantity: rand(1..10), purchase_price: rand(5..150))
-# t_1 = Transaction.new(stock_price_id: rand(1..505), portfolio_id: rand(1..15), buy_sell: "buy", quantity: rand(1..10), purchase_price: rand(5..150))
-# t_1 = Transaction.new(stock_price_id: rand(1..505), portfolio_id: rand(1..15), buy_sell: "buy", quantity: rand(1..10), purchase_price: rand(5..150))
-# t_1 = Transaction.new(stock_price_id: rand(1..505), portfolio_id: rand(1..15), buy_sell: "buy", quantity: rand(1..10), purchase_price: rand(5..150))
-# t_1 = Transaction.new(stock_price_id: rand(1..505), portfolio_id: rand(1..15), buy_sell: "buy", quantity: rand(1..10), purchase_price: rand(5..150))
-# t_1 = Transaction.new(stock_price_id: rand(1..505), portfolio_id: rand(1..15), buy_sell: "buy", quantity: rand(1..10), purchase_price: rand(5..150))
-# t_1 = Transaction.new(stock_price_id: rand(1..505), portfolio_id: rand(1..15), buy_sell: "buy", quantity: rand(1..10), purchase_price: rand(5..150))
-# t_1 = Transaction.new(stock_price_id: rand(1..505), portfolio_id: rand(1..15), buy_sell: "buy", quantity: rand(1..10), purchase_price: rand(5..150))
-# t_1 = Transaction.new(stock_price_id: rand(1..505), portfolio_id: rand(1..15), buy_sell: "buy", quantity: rand(1..10), purchase_price: rand(5..150))
-# t_1 = Transaction.new(stock_price_id: rand(1..505), portfolio_id: rand(1..15), buy_sell: "buy", quantity: rand(1..10), purchase_price: rand(5..150))
-# t_1 = Transaction.new(stock_price_id: rand(1..505), portfolio_id: rand(1..15), buy_sell: "buy", quantity: rand(1..10), purchase_price: rand(5..150))
-# t_1 = Transaction.new(stock_price_id: rand(1..505), portfolio_id: rand(1..15), buy_sell: "buy", quantity: rand(1..10), purchase_price: rand(5..150))
-# t_1 = Transaction.new(stock_price_id: rand(1..505), portfolio_id: rand(1..15), buy_sell: "buy", quantity: rand(1..10), purchase_price: rand(5..150))
-# t_1 = Transaction.new(stock_price_id: rand(1..505), portfolio_id: rand(1..15), buy_sell: "buy", quantity: rand(1..10), purchase_price: rand(5..150))
-# t_1 = Transaction.new(stock_price_id: rand(1..505), portfolio_id: rand(1..15), buy_sell: "buy", quantity: rand(1..10), purchase_price: rand(5..150))
-# t_1 = Transaction.new(stock_price_id: rand(1..505), portfolio_id: rand(1..15), buy_sell: "buy", quantity: rand(1..10), purchase_price: rand(5..150))
-# t_1 = Transaction.new(stock_price_id: rand(1..505), portfolio_id: rand(1..15), buy_sell: "buy", quantity: rand(1..10), purchase_price: rand(5..150))
-# t_1 = Transaction.new(stock_price_id: rand(1..505), portfolio_id: rand(1..15), buy_sell: "buy", quantity: rand(1..10), purchase_price: rand(5..150))
-# t_1 = Transaction.new(stock_price_id: rand(1..505), portfolio_id: rand(1..15), buy_sell: "buy", quantity: rand(1..10), purchase_price: rand(5..150))
-# t_1 = Transaction.new(stock_price_id: rand(1..505), portfolio_id: rand(1..15), buy_sell: "buy", quantity: rand(1..10), purchase_price: rand(5..150))
-# t_1 = Transaction.new(stock_price_id: rand(1..505), portfolio_id: rand(1..15), buy_sell: "buy", quantity: rand(1..10), purchase_price: rand(5..150))
+
 
 

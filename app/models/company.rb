@@ -1,4 +1,4 @@
 class Company < ApplicationRecord
-    has_many :stockprices
-    has_many :transactions, through: :stockprices
+    has_many :stock_prices
+    has_many :transactions, through: :stock_prices
 end
