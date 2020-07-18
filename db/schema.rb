@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 2020_07_18_064538) do
 
   create_table "stock_prices", force: :cascade do |t|
     t.integer "company_id"
-    t.string "current_price"
+    t.float "current_price"
     t.string "dollar_change"
     t.string "percent_change"
     t.string "as_of_time"
@@ -50,8 +50,8 @@ ActiveRecord::Schema.define(version: 2020_07_18_064538) do
     t.integer "portfolio_id"
     t.string "buy_sell"
     t.integer "quantity"
-    t.string "updated_at"
-    t.string "created_at"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "users", force: :cascade do |t|

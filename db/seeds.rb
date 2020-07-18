@@ -546,7 +546,7 @@
 
 #Stock Prices
 
-# StockPrice.destroy_all
+
 
 
 # def stock_tickers
@@ -701,8 +701,13 @@ def stock_scrapper_one_a
 
         if stock_price = cost.css('#quote-header-info').css("span").children[1]
             stock_price = cost.css('#quote-header-info').css("span").children[1].inner_text
+            if stock_price.include?(",")
+                updated_stock = stock_price.gsub(/[^\d^.]/, '').to_f
+              else 
+                updated_stock = stock_price.to_f
+              end
         else 
-            stock_price = "not found"
+            updated_stock = "not found"
             url = "https://finance.yahoo.com/quote/"
         end
 
@@ -776,7 +781,7 @@ def stock_scrapper_one_a
             url = "https://finance.yahoo.com/quote/"
         end
 
-        StockPrice.create(company_id: index + 1, current_price: stock_price, dollar_change: dollar_change, percent_change: percent_change, as_of_time: stock_time, daily_high: daily_high, daily_low: daily_low, fifty_two_week_high: fifty_two_high, fifty_two_week_low: fifty_two_low, transacted: false)
+        StockPrice.create(company_id: index + 1, current_price: updated_stock, dollar_change: dollar_change, percent_change: percent_change, as_of_time: stock_time, daily_high: daily_high, daily_low: daily_low, fifty_two_week_high: fifty_two_high, fifty_two_week_low: fifty_two_low, transacted: false)
         url = "https://finance.yahoo.com/quote/"
     }
   end
@@ -797,8 +802,13 @@ def stock_scrapper_one_a
 
         if stock_price = cost.css('#quote-header-info').css("span").children[1]
             stock_price = cost.css('#quote-header-info').css("span").children[1].inner_text
+            if stock_price.include?(",")
+                updated_stock = stock_price.gsub(/[^\d^.]/, '').to_f
+              else 
+                updated_stock = stock_price.to_f
+              end
         else 
-            stock_price = "not found"
+            updated_stock = "not found"
             url = "https://finance.yahoo.com/quote/"
         end
 
@@ -872,7 +882,7 @@ def stock_scrapper_one_a
             url = "https://finance.yahoo.com/quote/"
         end
 
-        StockPrice.create(company_id: index + 58, current_price: stock_price, dollar_change: dollar_change, percent_change: percent_change, as_of_time: stock_time, daily_high: daily_high, daily_low: daily_low, fifty_two_week_high: fifty_two_high, fifty_two_week_low: fifty_two_low, transacted: false)
+        StockPrice.create(company_id: index + 58, current_price: updated_stock, dollar_change: dollar_change, percent_change: percent_change, as_of_time: stock_time, daily_high: daily_high, daily_low: daily_low, fifty_two_week_high: fifty_two_high, fifty_two_week_low: fifty_two_low, transacted: false)
         url = "https://finance.yahoo.com/quote/"
     }
   end
@@ -894,8 +904,13 @@ def stock_scrapper_one_a
 
         if stock_price = cost.css('#quote-header-info').css("span").children[1]
             stock_price = cost.css('#quote-header-info').css("span").children[1].inner_text
+            if stock_price.include?(",")
+                updated_stock = stock_price.gsub(/[^\d^.]/, '').to_f
+              else 
+                updated_stock = stock_price.to_f
+              end
         else 
-            stock_price = "not found"
+            updated_stock = "not found"
             url = "https://finance.yahoo.com/quote/"
         end
 
@@ -969,7 +984,7 @@ def stock_scrapper_one_a
             url = "https://finance.yahoo.com/quote/"
         end
 
-        StockPrice.create(company_id: index + 116, current_price: stock_price, dollar_change: dollar_change, percent_change: percent_change, as_of_time: stock_time, daily_high: daily_high, daily_low: daily_low, fifty_two_week_high: fifty_two_high, fifty_two_week_low: fifty_two_low, transacted: false)
+        StockPrice.create(company_id: index + 116, current_price: updated_stock, dollar_change: dollar_change, percent_change: percent_change, as_of_time: stock_time, daily_high: daily_high, daily_low: daily_low, fifty_two_week_high: fifty_two_high, fifty_two_week_low: fifty_two_low, transacted: false)
         url = "https://finance.yahoo.com/quote/"
     }
   end
@@ -991,8 +1006,13 @@ def stock_scrapper_one_a
 
         if stock_price = cost.css('#quote-header-info').css("span").children[1]
             stock_price = cost.css('#quote-header-info').css("span").children[1].inner_text
+            if stock_price.include?(",")
+                updated_stock = stock_price.gsub(/[^\d^.]/, '').to_f
+              else 
+                updated_stock = stock_price.to_f
+              end
         else 
-            stock_price = "not found"
+            updated_stock = "not found"
             url = "https://finance.yahoo.com/quote/"
         end
 
@@ -1066,7 +1086,7 @@ def stock_scrapper_one_a
             url = "https://finance.yahoo.com/quote/"
         end
 
-        StockPrice.create(company_id: index + 172, current_price: stock_price, dollar_change: dollar_change, percent_change: percent_change, as_of_time: stock_time, daily_high: daily_high, daily_low: daily_low, fifty_two_week_high: fifty_two_high, fifty_two_week_low: fifty_two_low, transacted: false)
+        StockPrice.create(company_id: index + 172, current_price: updated_stock, dollar_change: dollar_change, percent_change: percent_change, as_of_time: stock_time, daily_high: daily_high, daily_low: daily_low, fifty_two_week_high: fifty_two_high, fifty_two_week_low: fifty_two_low, transacted: false)
         url = "https://finance.yahoo.com/quote/"
     }
   end
@@ -1088,8 +1108,13 @@ def stock_scrapper_one_a
 
         if stock_price = cost.css('#quote-header-info').css("span").children[1]
             stock_price = cost.css('#quote-header-info').css("span").children[1].inner_text
+            if stock_price.include?(",")
+                updated_stock = stock_price.gsub(/[^\d^.]/, '').to_f
+              else 
+                updated_stock = stock_price.to_f
+              end
         else 
-            stock_price = "not found"
+            updated_stock = "not found"
             url = "https://finance.yahoo.com/quote/"
         end
 
@@ -1163,7 +1188,7 @@ def stock_scrapper_one_a
             url = "https://finance.yahoo.com/quote/"
         end
 
-        StockPrice.create(company_id: index + 231, current_price: stock_price, dollar_change: dollar_change, percent_change: percent_change, as_of_time: stock_time, daily_high: daily_high, daily_low: daily_low, fifty_two_week_high: fifty_two_high, fifty_two_week_low: fifty_two_low, transacted: false)
+        StockPrice.create(company_id: index + 231, current_price: updated_stock, dollar_change: dollar_change, percent_change: percent_change, as_of_time: stock_time, daily_high: daily_high, daily_low: daily_low, fifty_two_week_high: fifty_two_high, fifty_two_week_low: fifty_two_low, transacted: false)
         url = "https://finance.yahoo.com/quote/"
     }
   end
@@ -1184,8 +1209,13 @@ def stock_scrapper_one_a
 
         if stock_price = cost.css('#quote-header-info').css("span").children[1]
             stock_price = cost.css('#quote-header-info').css("span").children[1].inner_text
+            if stock_price.include?(",")
+                updated_stock = stock_price.gsub(/[^\d^.]/, '').to_f
+              else 
+                updated_stock = stock_price.to_f
+              end
         else 
-            stock_price = "not found"
+            updated_stock = "not found"
             url = "https://finance.yahoo.com/quote/"
         end
 
@@ -1259,7 +1289,7 @@ def stock_scrapper_one_a
             url = "https://finance.yahoo.com/quote/"
         end
 
-        StockPrice.create(company_id: index + 288, current_price: stock_price, dollar_change: dollar_change, percent_change: percent_change, as_of_time: stock_time, daily_high: daily_high, daily_low: daily_low, fifty_two_week_high: fifty_two_high, fifty_two_week_low: fifty_two_low, transacted: false)
+        StockPrice.create(company_id: index + 288, current_price: updated_stock, dollar_change: dollar_change, percent_change: percent_change, as_of_time: stock_time, daily_high: daily_high, daily_low: daily_low, fifty_two_week_high: fifty_two_high, fifty_two_week_low: fifty_two_low, transacted: false)
         url = "https://finance.yahoo.com/quote/"
     }
   end
@@ -1281,8 +1311,13 @@ def stock_scrapper_one_a
 
         if stock_price = cost.css('#quote-header-info').css("span").children[1]
             stock_price = cost.css('#quote-header-info').css("span").children[1].inner_text
+            if stock_price.include?(",")
+                updated_stock = stock_price.gsub(/[^\d^.]/, '').to_f
+              else 
+                updated_stock = stock_price.to_f
+              end
         else 
-            stock_price = "not found"
+            updated_stock = "not found"
             url = "https://finance.yahoo.com/quote/"
         end
 
@@ -1356,7 +1391,7 @@ def stock_scrapper_one_a
             url = "https://finance.yahoo.com/quote/"
         end
 
-        StockPrice.create(company_id: index + 345, current_price: stock_price, dollar_change: dollar_change, percent_change: percent_change, as_of_time: stock_time, daily_high: daily_high, daily_low: daily_low, fifty_two_week_high: fifty_two_high, fifty_two_week_low: fifty_two_low, transacted: false)
+        StockPrice.create(company_id: index + 345, current_price: updated_stock, dollar_change: dollar_change, percent_change: percent_change, as_of_time: stock_time, daily_high: daily_high, daily_low: daily_low, fifty_two_week_high: fifty_two_high, fifty_two_week_low: fifty_two_low, transacted: false)
         url = "https://finance.yahoo.com/quote/"
     }
   end
@@ -1377,8 +1412,13 @@ def stock_scrapper_one_a
 
         if stock_price = cost.css('#quote-header-info').css("span").children[1]
             stock_price = cost.css('#quote-header-info').css("span").children[1].inner_text
+            if stock_price.include?(",")
+                updated_stock = stock_price.gsub(/[^\d^.]/, '').to_f
+              else 
+                updated_stock = stock_price.to_f
+              end
         else 
-            stock_price = "not found"
+            updated_stock = "not found"
             url = "https://finance.yahoo.com/quote/"
         end
 
@@ -1452,7 +1492,7 @@ def stock_scrapper_one_a
             url = "https://finance.yahoo.com/quote/"
         end
 
-        StockPrice.create(company_id: index + 402, current_price: stock_price, dollar_change: dollar_change, percent_change: percent_change, as_of_time: stock_time, daily_high: daily_high, daily_low: daily_low, fifty_two_week_high: fifty_two_high, fifty_two_week_low: fifty_two_low, transacted: false)
+        StockPrice.create(company_id: index + 402, current_price: updated_stock, dollar_change: dollar_change, percent_change: percent_change, as_of_time: stock_time, daily_high: daily_high, daily_low: daily_low, fifty_two_week_high: fifty_two_high, fifty_two_week_low: fifty_two_low, transacted: false)
         url = "https://finance.yahoo.com/quote/"
     }
   end
@@ -1474,8 +1514,13 @@ def stock_scrapper_one_a
 
         if stock_price = cost.css('#quote-header-info').css("span").children[1]
             stock_price = cost.css('#quote-header-info').css("span").children[1].inner_text
+            if stock_price.include?(",")
+                updated_stock = stock_price.gsub(/[^\d^.]/, '').to_f
+              else 
+                updated_stock = stock_price.to_f
+              end
         else 
-            stock_price = "not found"
+            updated_stock = "not found"
             url = "https://finance.yahoo.com/quote/"
         end
 
@@ -1549,14 +1594,14 @@ def stock_scrapper_one_a
             url = "https://finance.yahoo.com/quote/"
         end
 
-        StockPrice.create(company_id: index + 458, current_price: stock_price, dollar_change: dollar_change, percent_change: percent_change, as_of_time: stock_time, daily_high: daily_high, daily_low: daily_low, fifty_two_week_high: fifty_two_high, fifty_two_week_low: fifty_two_low, transacted: false)
+        StockPrice.create(company_id: index + 458, current_price: updated_stock, dollar_change: dollar_change, percent_change: percent_change, as_of_time: stock_time, daily_high: daily_high, daily_low: daily_low, fifty_two_week_high: fifty_two_high, fifty_two_week_low: fifty_two_low, transacted: false)
         url = "https://finance.yahoo.com/quote/"
     }
   end
 
+  StockPrice.destroy_all
 
-
-# stock_scrapper_one_a
+stock_scrapper_one_a
 # stock_scrapper_one_b
 # stock_scrapper_two_a
 # stock_scrapper_two_b

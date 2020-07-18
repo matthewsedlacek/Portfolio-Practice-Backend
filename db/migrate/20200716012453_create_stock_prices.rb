@@ -2,7 +2,7 @@ class CreateStockPrices < ActiveRecord::Migration[6.0]
   def change
     create_table :stock_prices do |t|
       t.integer :company_id
-      t.string :current_price
+      t.float :current_price
       t.string :dollar_change
       t.string :percent_change
       t.string :as_of_time
