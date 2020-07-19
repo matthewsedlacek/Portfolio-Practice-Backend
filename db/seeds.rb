@@ -1599,9 +1599,9 @@ def stock_scrapper_one_a
     }
   end
 
-  StockPrice.destroy_all
+#   StockPrice.destroy_all
 
-stock_scrapper_one_a
+# stock_scrapper_one_a
 # stock_scrapper_one_b
 # stock_scrapper_two_a
 # stock_scrapper_two_b
@@ -1615,7 +1615,7 @@ stock_scrapper_one_a
 #Transactions
 # Transaction.destroy_all
 # 200.times do
-#     Transaction.create(stock_price_id: rand(1389...1893), portfolio_id: rand(1...15), buy_sell: "buy", quantity: rand(1...10))
+#     Transaction.create(stock_price_id: rand(382...886), portfolio_id: rand(1...15), buy_sell: "buy", quantity: rand(1...10))
 # end
 
 
