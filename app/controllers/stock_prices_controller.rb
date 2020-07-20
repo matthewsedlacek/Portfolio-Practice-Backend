@@ -1,7 +1,7 @@
 class StockPricesController < ApplicationController
     def index
         stock_prices = StockPrice.all
-        render json: StockPriceSerializer.new(stock_prices)
+        render json: stock_prices
     end
     
     def show

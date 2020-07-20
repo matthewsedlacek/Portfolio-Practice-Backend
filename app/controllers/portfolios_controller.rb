@@ -1,7 +1,7 @@
 class PortfoliosController < ApplicationController
     def index
         portfolios = Portfolio.all
-        render json: PortfolioSerializer.new(portfolios)
+        render json: portfolios
     end
     
     def show

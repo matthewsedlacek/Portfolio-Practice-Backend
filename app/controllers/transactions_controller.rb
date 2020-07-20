@@ -1,7 +1,7 @@
 class TransactionsController < ApplicationController
     def index
         transactions = Transaction.all
-        render json: TransactionSerializer.new(transactions)
+        render json: transactions
     end
     
     def show

@@ -1,7 +1,7 @@
 class CompaniesController < ApplicationController
     def index
         companies = Company.all
-        render json: CompanySerializer.new(companies)
+        render json: companies
     end
     
     def show
