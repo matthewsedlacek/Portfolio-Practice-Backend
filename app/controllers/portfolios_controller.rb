@@ -1,7 +1,7 @@
 class PortfoliosController < ApplicationController
     def index
-        portfolios = Portfolio.all
-        render json: portfolios
+        portfolios = Portfolio.select{|portfolio| portfolio.user_id == current_user.id }
+        render json: portfolios, include: ['transactions.stock_price']
     end
     
     def show
