@@ -10,7 +10,7 @@ class TransactionsController < ApplicationController
     end
 
     def create
-        transaction = Transaction.create(portfolio_params)
+        transaction = Transaction.create(transaction_params)
         render json: TransactionSerializer.new(transaction)
     end
 
@@ -27,6 +27,6 @@ class TransactionsController < ApplicationController
 
     private
     def transaction_params
-        params.require(:transaction).permit(:stock_price_id, :portfolio_id, :buy_sell, :quantity, :purchase_price)
+        params.require(:transaction).permit(:stock_price_id, :portfolio_id, :buy_sell, :quantity)
     end
 end
