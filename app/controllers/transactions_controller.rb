@@ -27,6 +27,6 @@ class TransactionsController < ApplicationController
 
     private
     def transaction_params
-        params.require(:transaction).permit(:stock_price_id, :portfolio_id, :buy_sell, :quantity)
+        params.require(:transaction).permit(:stock_price_id, :portfolio_id, :buy_sell, :quantity, :value)
     end
 end

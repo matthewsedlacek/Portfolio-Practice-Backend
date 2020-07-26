@@ -29,6 +29,7 @@ class PortfoliosController < ApplicationController
 
     private
     def portfolio_params
-        params.require(:portfolio).permit(:name, :value, :user_id)
+        params.require(:portfolio).permit(:name, :starting_value, :user_id, :locked_in_value, :available_cash)
     end
 end
+
