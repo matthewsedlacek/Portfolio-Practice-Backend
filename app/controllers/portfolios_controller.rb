@@ -8,7 +8,7 @@ class PortfoliosController < ApplicationController
     
     def show
         portfolio = Portfolio.find_by(id: params[:id])
-        render json: PortfolioSerializer.new(portfolio)
+        render json: portfolio
     end
 
     def create
@@ -16,9 +16,10 @@ class PortfoliosController < ApplicationController
         render json: PortfolioSerializer.new(portfolio)
     end
 
-    def edit
-        portfolio = Portfolio.update(portfolio_params)
-        render json: PortfolioSerializer.new(portfolio)
+    def update
+        portfolio = Portfolio.find_by(id: params[:id])
+        portfolio.update(portfolio_params)
+        render json: portfolio
     end
 
     def destroy
@@ -29,7 +30,7 @@ class PortfoliosController < ApplicationController
 
     private
     def portfolio_params
-        params.require(:portfolio).permit(:name, :starting_value, :user_id, :locked_in_value, :available_cash)
+        params.require(:portfolio).permit(:id, :name, :starting_value, :user_id, :locked_in_value, :available_cash)
     end
 end
 

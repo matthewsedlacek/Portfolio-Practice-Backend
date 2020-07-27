@@ -11,7 +11,7 @@ class TransactionsController < ApplicationController
 
     def create
         transaction = Transaction.create(transaction_params)
-        render json: TransactionSerializer.new(transaction)
+        render json: transaction
     end
 
     def edit
