@@ -6,7 +6,7 @@ class StockPricesController < ApplicationController
     
     def show
         stock_price = StockPrice.find_by(id: params[:id])
-        render json: StockPriceSerializer.new(stock_price)
+        render json: stock_price
     end
 
     def create
@@ -14,9 +14,10 @@ class StockPricesController < ApplicationController
         render json: StockPriceSerializer.new(stock_price)
     end
 
-    def edit
-        stock_price = StockPrice.update(stock_price_params)
-        render json: StockPriceSerializer.new(stock_price)
+    def update
+        stock_price = StockPrice.find_by(id: params[:id])
+        stock_price.update(stock_price_params)
+        render json: stock_price
     end
 
     def destroy
