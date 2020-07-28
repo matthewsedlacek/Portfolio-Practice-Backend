@@ -527,21 +527,23 @@
 
 #Portfolios
 
-# portfolio_1 = Portfolio.create(name: "The Port" , value: 17000.00 , user_id: rand(1..6))
-# portfolio_2 = Portfolio.create(name: "Folio" , value: 15000.00 , user_id: rand(1..6))
-# portfolio_3 = Portfolio.create(name: "1st Time Investor" , value: 25000.00 , user_id: rand(1..6) )
-# portfolio_4 = Portfolio.create(name: "Tech Stocks", value: 5000.00 , user_id: rand(1..6) )
-# portfolio_5 = Portfolio.create(name: "Just for Fun", value: 2450.00 , user_id: rand(1..6) )
-# portfolio_6 = Portfolio.create(name: "Wall Street Hawk", value: 2304.00 , user_id: rand(1..6) )
-# portfolio_7 = Portfolio.create(name: "Seeking Alpha", value: 34500.00 , user_id: rand(1..6) )
-# portfolio_8 = Portfolio.create(name: "Better Beta", value: 14000.00 , user_id: rand(1..6) )
-# portfolio_9 = Portfolio.create(name: "My Portfolio", value: 12000.00, user_id: rand(1..6) )
-# portfolio_10 = Portfolio.create(name: "I'm Rich", value: 18000.00, user_id: rand(1..6) )
-# portfolio_11 = Portfolio.create(name: "The Bear", value: 16000.12 , user_id: rand(1..6) )
-# portfolio_12 = Portfolio.create(name: "Dividender", value: 1800.14 , user_id: rand(1..6) )
-# portfolio_13 = Portfolio.create(name: "Mad Money", value: 12000.00 , user_id: rand(1..6) )
-# portfolio_14 = Portfolio.create(name: "Market Surfer", value: 50000.00 , user_id: rand(1..6) )
-# portfolio_15 = Portfolio.create(name: "The Bull", value: 17089.00 , user_id: rand(1..6) )
+#   Portfolio.destroy_all
+
+# portfolio_1 = Portfolio.create(name: "The Port" , starting_value: 17000.00 , user_id: rand(1..6), locked_in_value: 17000.00 , available_cash: 17000.00 )
+# portfolio_2 = Portfolio.create(name: "Folio" , starting_value: 15000.00 , user_id: rand(1..6), locked_in_value: 15000.00 , available_cash: 15000.00 )
+# portfolio_3 = Portfolio.create(name: "1st Time Investor" , starting_value: 25000.00 , user_id: rand(1..6), locked_in_value: 25000.00 , available_cash: 25000.00 )
+# portfolio_4 = Portfolio.create(name: "Tech Stocks", starting_value: 5000.00 , user_id: rand(1..6), locked_in_value: 5000.00 , available_cash: 5000.00)
+# portfolio_5 = Portfolio.create(name: "Just for Fun", starting_value: 2450.00 , user_id: rand(1..6), locked_in_value: 2450.00 , available_cash: 2450.00 )
+# portfolio_6 = Portfolio.create(name: "Wall Street Hawk", starting_value: 2304.00 , user_id: rand(1..6), locked_in_value: 2304.00 , available_cash: 2304.00 )
+# portfolio_7 = Portfolio.create(name: "Seeking Alpha", starting_value: 34500.00 , user_id: rand(1..6), locked_in_value: 34500.00 , available_cash: 34500.00 )
+# portfolio_8 = Portfolio.create(name: "Better Beta", starting_value: 14000.00 , user_id: rand(1..6), locked_in_value: 14000.00 , available_cash: 14000.00 )
+# portfolio_9 = Portfolio.create(name: "My Portfolio", starting_value: 12000.00, user_id: rand(1..6), locked_in_value: 12000.00 , available_cash: 12000.00 )
+# portfolio_10 = Portfolio.create(name: "I'm Rich", starting_value: 18000.00, user_id: rand(1..6), locked_in_value: 18000.00 , available_cash: 18000.00 )
+# portfolio_11 = Portfolio.create(name: "The Bear", starting_value: 16000.12 , user_id: rand(1..6), locked_in_value: 16000.12 , available_cash: 16000.12)
+# portfolio_12 = Portfolio.create(name: "Dividender", starting_value: 1800.14 , user_id: rand(1..6), locked_in_value: 1800.14 , available_cash: 1800.14 )
+# portfolio_13 = Portfolio.create(name: "Mad Money", starting_value: 12000.00 , user_id: rand(1..6), locked_in_value: 12000.00 , available_cash: 12000.00 )
+# portfolio_14 = Portfolio.create(name: "Market Surfer", starting_value: 50000.00 , user_id: rand(1..6), locked_in_value: 50000.00, available_cash: 50000.00)
+# portfolio_15 = Portfolio.create(name: "The Bull", starting_value: 17089.00 , user_id: rand(1..6), locked_in_value: 17089.00 , available_cash: 17089.00 )
 
 
 #Stock Prices
@@ -1613,11 +1615,44 @@ def stock_scrapper_one_a
 
 
 #Transactions
+
+#NEED TO UPDATE PORTFOLIO IDS AND STOCK PRICE RANGES
+
 # Transaction.destroy_all
 # 200.times do
-#     Transaction.create(stock_price_id: rand(382...886), portfolio_id: rand(1...15), buy_sell: "buy", quantity: rand(1...10))
+    # random_quantity = rand(1...10)
+#     Transaction.create(stock_price_id: rand(382...886), portfolio_id: rand(1...15), buy_sell: "buy", quantity: random_quantity, value
 # end
 
-
-
+# Transaction.create(stock_price_id: 382, portfolio_id: 34, buy_sell: 'buy', quantity: 2, value: 341.66.round(2))
+# Transaction.create(stock_price_id: 383, portfolio_id: 34, buy_sell: 'buy', quantity: 3, value: 297.75.round(2))
+# Transaction.create(stock_price_id: 384, portfolio_id: 34, buy_sell: 'buy', quantity: 1, value: 100.83.round(2))
+# Transaction.create(stock_price_id: 385, portfolio_id: 34, buy_sell: 'buy', quantity: 4, value: 1138.2.round(2))
+# Transaction.create(stock_price_id: 386, portfolio_id: 34, buy_sell: 'buy', quantity: 3, value: 665.82.round(2))
+# Transaction.create(stock_price_id: 387, portfolio_id: 35, buy_sell: 'buy', quantity: 2, value: 157.28.round(2))
+# Transaction.create(stock_price_id: 388, portfolio_id: 35, buy_sell: 'buy', quantity: 4, value: 1729.68.round(2))
+# Transaction.create(stock_price_id: 389, portfolio_id: 35, buy_sell: 'buy', quantity: 6, value: 330.24.round(2))
+# Transaction.create(stock_price_id: 390, portfolio_id: 35, buy_sell: 'buy', quantity: 3, value: 434.58.round(2))
+# Transaction.create(stock_price_id: 391, portfolio_id: 36, buy_sell: 'buy', quantity: 3, value: 46.89.round(2))
+# Transaction.create(stock_price_id: 392, portfolio_id: 36, buy_sell: 'buy', quantity: 7, value: 253.54.round(2))
+# Transaction.create(stock_price_id: 393, portfolio_id: 36, buy_sell: 'buy', quantity: 4, value: 377.48.round(2))
+# Transaction.create(stock_price_id: 394, portfolio_id: 36, buy_sell: 'buy', quantity: 3, value: 882.round(2))
+# Transaction.create(stock_price_id: 395, portfolio_id: 36, buy_sell: 'buy', quantity: 6, value: 675.9.round(2))
+# Transaction.create(stock_price_id: 396, portfolio_id: 36, buy_sell: 'buy', quantity: 4, value: 148.round(2))
+# Transaction.create(stock_price_id: 397, portfolio_id: 37, buy_sell: 'buy', quantity: 7, value: 619.22.round(2))
+# Transaction.create(stock_price_id: 398, portfolio_id: 37, buy_sell: 'buy', quantity: 7, value: 1167.25.round(2))
+# Transaction.create(stock_price_id: 399, portfolio_id: 37, buy_sell: 'buy', quantity: 7, value: 764.68.round(2))
+# Transaction.create(stock_price_id: 400, portfolio_id: 37, buy_sell: 'buy', quantity: 4, value: 1289.2.round(2))
+# Transaction.create(stock_price_id: 401, portfolio_id: 37, buy_sell: 'buy', quantity: 1, value: 106.85.round(2))
+# Transaction.create(stock_price_id: 402, portfolio_id: 37, buy_sell: 'buy', quantity: 4, value: 203.08.round(2))
+# Transaction.create(stock_price_id: 403, portfolio_id: 41, buy_sell: 'buy', quantity: 5, value: 458.35.round(2))
+# Transaction.create(stock_price_id: 405, portfolio_id: 41, buy_sell: 'buy', quantity: 1, value: 1515.55.round(2))
+# Transaction.create(stock_price_id: 406, portfolio_id: 41, buy_sell: 'buy', quantity: 1, value: 41.54.round(2))
+# Transaction.create(stock_price_id: 407, portfolio_id: 41, buy_sell: 'buy', quantity: 1, value: 2961.97.round(2))
+# Transaction.create(stock_price_id: 410, portfolio_id: 41, buy_sell: 'buy', quantity: 1, value: 11.91.round(2))
+# Transaction.create(stock_price_id: 411, portfolio_id: 46, buy_sell: 'buy', quantity: 1, value: 87.51.round(2))
+# Transaction.create(stock_price_id: 412, portfolio_id: 46, buy_sell: 'buy', quantity: 1, value: 95.18.round(2))
+# Transaction.create(stock_price_id: 413, portfolio_id: 46, buy_sell: 'buy', quantity: 2, value: 64.24.round(2))
+# Transaction.create(stock_price_id: 414, portfolio_id: 46, buy_sell: 'buy', quantity: 2, value: 518.22.round(2))
+# Transaction.create(stock_price_id: 415, portfolio_id: 47, buy_sell: 'buy', quantity: 2, value: 282.44.round(2))
 
