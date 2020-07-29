@@ -4,4 +4,5 @@ class User < ApplicationRecord
     has_secure_password
     has_many :portfolios
     has_many :transactions, through: :portfolios
+    has_one :watchlist
 end

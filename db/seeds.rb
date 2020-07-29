@@ -1656,3 +1656,11 @@ def stock_scrapper_one_a
 # Transaction.create(stock_price_id: 414, portfolio_id: 46, buy_sell: 'buy', quantity: 2, value: 518.22.round(2))
 # Transaction.create(stock_price_id: 415, portfolio_id: 47, buy_sell: 'buy', quantity: 2, value: 282.44.round(2))
 
+# Watchlist.create(user_id: 4)
+
+
+# WatchlistPrice.create(watchlist_id: 1, stock_price_id: 454)
+# WatchlistPrice.create(watchlist_id: 1, stock_price_id: 440)
+# WatchlistPrice.create(watchlist_id: 1, stock_price_id: 411)
+# WatchlistPrice.create(watchlist_id: 1, stock_price_id: 398)
+# WatchlistPrice.create(watchlist_id: 1, stock_price_id: 384)
