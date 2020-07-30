@@ -13,7 +13,7 @@ class WatchlistsController < ApplicationController
 
     def create
         watchlist = Watchlist.create(watchlist_params)
-        render json: WatchlistSerializer.new(watchlist)
+        render json: watchlist
     end
 
     def update
