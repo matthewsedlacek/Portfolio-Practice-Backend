@@ -1,7 +1,10 @@
 class WatchlistPricesController < ApplicationController
     def index
-        watchlist_prices = WatchlistPrice.all
-        render json: watchlist_prices
+        # byebug;
+        watchlist_prices = current_user.watchlist.watchlist_prices
+        # watchlist_prices = WatchlistPrice.select{|watchlist| currentwatchlist.user_id == current_user.id }
+        render json: watchlist_prices, include: ['stock_price.company']
+
     end
     
     def show

@@ -1,7 +1,7 @@
 class WatchlistsController < ApplicationController
     def index
         watchlists = Watchlist.select{|watchlist| watchlist.user_id == current_user.id }
-        render json: watchlists, include: ['stock_prices.company']
+        render json: watchlists, include: ['stock_prices.company', 'watchlist_prices']
         # company = Company.all
         # render json: {portfolios, include: ['transactions.stock_price'], company: CompanySerializer.new(company)}
     end
