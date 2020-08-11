@@ -14,7 +14,7 @@ class PortfoliosController < ApplicationController
 
     def create
         portfolio = Portfolio.create(portfolio_params)
-        render json: PortfolioSerializer.new(portfolio)
+        render json: portfolio
     end
 
     def update
