@@ -1,9 +1,10 @@
 # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 Rails.application.routes.draw do
-  resources :watchlist_prices
+  resources :watchlist_companies
+  # resources :watchlist_prices
   resources :watchlists
   resources :transactions
-  resources :stock_prices
+  # resources :stock_prices
   resources :portfolios
   resources :companies
   

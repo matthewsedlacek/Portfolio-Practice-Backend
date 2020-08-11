@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_29_184706) do
+ActiveRecord::Schema.define(version: 2020_08_11_060643) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,29 +32,15 @@ ActiveRecord::Schema.define(version: 2020_07_29_184706) do
     t.float "available_cash"
   end
 
-  create_table "stock_prices", force: :cascade do |t|
-    t.integer "company_id"
-    t.float "current_price"
-    t.string "dollar_change"
-    t.string "percent_change"
-    t.string "as_of_time"
-    t.string "daily_high"
-    t.string "daily_low"
-    t.string "fifty_two_week_high"
-    t.string "fifty_two_week_low"
-    t.boolean "transacted"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
   create_table "transactions", force: :cascade do |t|
-    t.integer "stock_price_id"
     t.integer "portfolio_id"
     t.string "buy_sell"
     t.integer "quantity"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.float "value"
+    t.float "share_price"
+    t.integer "company_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -64,9 +50,9 @@ ActiveRecord::Schema.define(version: 2020_07_29_184706) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "watchlist_prices", force: :cascade do |t|
+  create_table "watchlist_companies", force: :cascade do |t|
     t.integer "watchlist_id"
-    t.integer "stock_price_id"
+    t.integer "company_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
