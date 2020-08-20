@@ -57,7 +57,7 @@ Coming Soon
 Prior Versions
 
 - Nokogiri
-  Used to scrape stock market data from yahoo finance and save to database (see yahoo_scraper.rb, in this repo, for example).
+  Used to scrape stock market data from yahoo finance and save to database (see yahoo_scraper.rb file in this repository for example).
 - Cron Jobs
   Used in conjunction with Nokogiri to scrape yahoo finance data in 15 minute intervals during trading hours
 
