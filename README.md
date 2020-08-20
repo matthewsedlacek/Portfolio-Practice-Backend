@@ -45,8 +45,6 @@ Coming Soon
 - Graph showing users returns vs. S&P 500
 - Preview of transaction before submit
 
-## Screenshots
-
 ## Backend Technology Used
 
 - Rails as API
