@@ -17,6 +17,12 @@ Portfolio Practice was created to be an educational tool for new investors and f
 
 Users can:
 
+Login/Signup Pages
+
+- Log in to their account
+- Create a new account
+- Signout of their account
+
 Profile Page
 
 - Add stocks to a personal watchlist
