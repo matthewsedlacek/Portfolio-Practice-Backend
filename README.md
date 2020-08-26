@@ -13,44 +13,6 @@ Portfolio Practice was created to be an educational tool for new investors and f
 3. Enter `rails s` in your terminal to run locally
 4. Run the frontend server - refer to [frontend](https://github.com/matthewsedlacek/portfolio-practice-frontend) repository
 
-## Frontend Features
-
-Users can:
-
-Login/Signup Pages
-
-- Log in to their account
-- Create a new account
-- Signout of their account
-
-Profile Page
-
-- Add stocks to a personal watchlist
-- View stock price and daily change of stocks in watchlist
-- Add stocks to watchlist
-- Delete stocks from watchlist
-- View news stories related to the stock market
-- View awards earned from trading
-
-Portfolio Page
-
-- Create a portoflio
-- View portoflio transactions
-- View gains and losses on their stock transactions
-- View value, available cash, and buying power of their portfolios
-
-Trading Page
-
-- Buy stocks for specified portfolio
-- Sell stocks for specified portfolio
-- View company stock information
-
-Coming Soon
-
-- List of terms and equations useful for stock trading
-- Graph showing users returns vs. S&P 500
-- Preview of transaction before submit
-
 ## Backend Technology Used
 
 - Rails as API
