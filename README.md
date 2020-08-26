@@ -61,21 +61,9 @@ Prior Versions
 - Cron Jobs
   - Used in conjunction with Nokogiri to scrape yahoo finance data in 15 minute intervals during trading hours
 
-## Special Thanks To
+## Author
 
-Finnhub.io
-
-- Stock Market API
-
-Stocknewsapi.com
-
-- Stock Market News API
-
-## Collaborators
-
-Helen Johns
-
-- UX/UI Designer
+- Matthew Sedlacek - [Github](https://github.com/matthewsedlacek) [LinkedIn](https://www.linkedin.com/in/matthew-sedlacek/)
 
 ## Licensing
 
