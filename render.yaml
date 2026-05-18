@@ -1,0 +1,26 @@
+databases:
+  - name: portfolio-practice-db
+    databaseName: portfolio_practice
+    user: portfolio_practice
+    plan: free
+
+services:
+  - type: web
+    name: portfolio-practice-api
+    env: ruby
+    plan: free
+    buildCommand: bundle install && bundle exec rails db:migrate
+    startCommand: bundle exec puma -C config/puma.rb
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: portfolio-practice-db
+          property: connectionString
+      - key: RAILS_ENV
+        value: production
+      - key: RAILS_LOG_TO_STDOUT
+        value: "true"
+      - key: RAILS_SERVE_STATIC_FILES
+        value: "true"
+      - key: SECRET_KEY_BASE
+        generateValue: true

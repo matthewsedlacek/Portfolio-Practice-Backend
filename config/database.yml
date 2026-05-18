@@ -80,6 +80,4 @@ test:
 #
 production:
   <<: *default
-  database: portfolio_practice_production
-  username: portfolio_practice
-  password: <%= ENV['PORTFOLIO_PRACTICE_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
