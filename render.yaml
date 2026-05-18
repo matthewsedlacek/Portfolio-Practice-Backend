@@ -9,7 +9,7 @@ services:
     name: portfolio-practice-api
     env: ruby
     plan: free
-    buildCommand: bundle config set deployment false && bundle install && bundle exec rails db:migrate
+    buildCommand: bundle config set deployment false && bundle install && bundle exec rails db:migrate && bundle exec rails db:seed
     startCommand: bundle exec puma -C config/puma.rb
     envVars:
       - key: DATABASE_URL

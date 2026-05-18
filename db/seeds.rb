@@ -1,4 +1,6 @@
 
+return if User.count > 0
+
 # Users
 
 blake = User.create(username: "blaksedlacek" , password:"hunter1")
