@@ -1,33 +1,38 @@
 class WatchlistsController < ApplicationController
-    def index
-        watchlists = Watchlist.select{|watchlist| watchlist.user_id == current_user.id }
-        render json: watchlists
-    end
-    
-    def show
-        watchlist = Watchlist.find_by(id: params[:id])
-        render json: watchlist
-    end
+  before_action :set_watchlist, only: [:show, :update, :destroy]
 
-    def create
-        watchlist = Watchlist.create(watchlist_params)
-        render json: watchlist
-    end
+  def index
+    watchlists = Watchlist.where(user_id: current_user.id)
+    render json: watchlists
+  end
 
-    def update
-        watchlist = Watchlist.find_by(id: params[:id])
-        watchlist.update(watchlist_params)
-        render json: watchlist
-    end
+  def show
+    render json: @watchlist
+  end
 
-    def destroy
-        watchlist = Watchlist.find(params[:id])
-        watchlist.destroy
-        render json: {info: "Deleted"}
+  def create
+    watchlist = Watchlist.new
+    watchlist.user_id = current_user.id
+    if watchlist.save
+      render json: watchlist, status: :created
+    else
+      render json: { errors: watchlist.errors.full_messages }, status: :unprocessable_entity
     end
+  end
 
-    private
-    def watchlist_params
-        params.require(:watchlist).permit(:id, :user_id)
-    end
+  def update
+    render json: @watchlist
+  end
+
+  def destroy
+    @watchlist.destroy
+    render json: { info: 'Deleted' }
+  end
+
+  private
+
+  def set_watchlist
+    @watchlist = Watchlist.find_by(id: params[:id], user_id: current_user.id)
+    render json: { error: 'Not found' }, status: :not_found unless @watchlist
+  end
 end

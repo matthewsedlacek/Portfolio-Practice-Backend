@@ -1,13 +1,10 @@
-# For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 Rails.application.routes.draw do
-  resources :watchlist_companies
-  # resources :watchlist_prices
-  resources :watchlists
-  resources :transactions
-  # resources :stock_prices
-  resources :portfolios
-  resources :companies
-  
+  resources :watchlist_companies, only: [:index, :show, :create, :update, :destroy]
+  resources :watchlists, only: [:index, :show, :create, :update, :destroy]
+  resources :transactions, only: [:index, :show, :create, :update, :destroy]
+  resources :portfolios, only: [:index, :show, :create, :update, :destroy]
+  resources :companies, only: [:index, :show, :create, :update, :destroy]
+
   namespace :api do
     namespace :v1 do
       resources :users, only: [:create]
