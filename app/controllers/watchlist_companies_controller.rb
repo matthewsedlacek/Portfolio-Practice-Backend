@@ -2,8 +2,10 @@ class WatchlistCompaniesController < ApplicationController
   before_action :set_watchlist_company, only: [:show, :update, :destroy]
 
   def index
-    watchlist_companies = current_user.watchlist.watchlist_companies
-    render json: watchlist_companies
+    watchlist = current_user.watchlist
+    return render json: [], status: :ok unless watchlist
+
+    render json: watchlist.watchlist_companies
   end
 
   def show
@@ -11,7 +13,10 @@ class WatchlistCompaniesController < ApplicationController
   end
 
   def create
-    watchlist_company = WatchlistCompany.new(watchlist_company_params)
+    watchlist = current_user.watchlist
+    return render json: { error: 'Watchlist not found' }, status: :not_found unless watchlist
+
+    watchlist_company = watchlist.watchlist_companies.build(company_id: watchlist_company_params[:company_id])
     if watchlist_company.save
       render json: watchlist_company, status: :created
     else
@@ -40,6 +45,6 @@ class WatchlistCompaniesController < ApplicationController
   end
 
   def watchlist_company_params
-    params.require(:watchlist_company).permit(:watchlist_id, :company_id)
+    params.require(:watchlist_company).permit(:company_id)
   end
 end

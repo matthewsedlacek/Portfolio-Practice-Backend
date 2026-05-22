@@ -2,7 +2,7 @@ class PortfoliosController < ApplicationController
   before_action :set_portfolio, only: [:show, :update, :destroy]
 
   def index
-    portfolios = Portfolio.where(user_id: current_user.id)
+    portfolios = Portfolio.where(user_id: current_user.id).includes(transactions: :company)
     render json: portfolios, include: ['transactions', 'transactions.company']
   end
 

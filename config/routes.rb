@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :watchlists, only: [:index, :show, :create, :update, :destroy]
   resources :transactions, only: [:index, :show, :create, :update, :destroy]
   resources :portfolios, only: [:index, :show, :create, :update, :destroy]
-  resources :companies, only: [:index, :show, :create, :update, :destroy]
+  resources :companies, only: [:index, :show]
 
   namespace :api do
     namespace :v1 do
