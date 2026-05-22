@@ -22,5 +22,7 @@ services:
         value: "true"
       - key: RAILS_SERVE_STATIC_FILES
         value: "true"
+      - key: ALLOWED_ORIGINS
+        value: "https://stock-market-practice.netlify.app"
       - key: SECRET_KEY_BASE
         generateValue: true
