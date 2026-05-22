@@ -13,7 +13,7 @@ class ApplicationController < ActionController::API
     if auth_header
       begin
         JWT.decode(auth_header, Rails.application.secret_key_base, true, algorithm: 'HS256')
-      rescue JWT::DecodeError
+      rescue JWT::DecodeError, ArgumentError
         nil
       end
     end
