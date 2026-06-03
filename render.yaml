@@ -1,9 +1,3 @@
-databases:
-  - name: portfolio-practice-db
-    databaseName: portfolio_practice
-    user: portfolio_practice
-    plan: free
-
 services:
   - type: web
     name: portfolio-practice-api
@@ -13,9 +7,7 @@ services:
     startCommand: bundle exec puma -C config/puma.rb
     envVars:
       - key: DATABASE_URL
-        fromDatabase:
-          name: portfolio-practice-db
-          property: connectionString
+        sync: false
       - key: RAILS_ENV
         value: production
       - key: RAILS_LOG_TO_STDOUT
