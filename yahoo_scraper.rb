@@ -13,8 +13,8 @@ def stock_scrapper
     stock_tickers.each_with_index {|stock, index|
         sleep 1
         url = url.concat(stock)
-        if cost = Nokogiri::HTML(URI.open(url))
-            cost = Nokogiri::HTML(URI.open(url))
+        if cost = Nokogiri::HTML(URI(url).open)
+            cost = Nokogiri::HTML(URI(url).open)
         else
             cost = "not found"
             url = "https://finance.yahoo.com/quote/"
