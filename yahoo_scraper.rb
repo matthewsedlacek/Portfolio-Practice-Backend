@@ -1,6 +1,5 @@
 require 'open-uri'
 require 'nokogiri'
-require 'pry'
 
 # Web Scraper used in previous verisions of Portfolio Practice App
 
@@ -14,8 +13,8 @@ def stock_scrapper
     stock_tickers.each_with_index {|stock, index|
         sleep 1
         url = url.concat(stock)
-        if cost = Nokogiri::HTML(open(url))
-            cost = Nokogiri::HTML(open(url))
+        if cost = Nokogiri::HTML(URI.open(url))
+            cost = Nokogiri::HTML(URI.open(url))
         else
             cost = "not found"
             url = "https://finance.yahoo.com/quote/"
