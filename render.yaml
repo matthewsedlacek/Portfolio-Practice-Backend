@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: portfolio-practice-api
+    env: ruby
+    plan: free
+    buildCommand: bundle config set deployment false && bundle install && bundle exec rails db:migrate && bundle exec rails db:seed
+    startCommand: bundle exec puma -C config/puma.rb
+    envVars:
+      - key: DATABASE_URL
+        sync: false
+      - key: RAILS_ENV
+        value: production
+      - key: RAILS_LOG_TO_STDOUT
+        value: "true"
+      - key: RAILS_SERVE_STATIC_FILES
+        value: "true"
+      - key: ALLOWED_ORIGINS
+        value: "https://stock-market-practice.netlify.app"
+      - key: SECRET_KEY_BASE
+        generateValue: true
