@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '3.2.0'
+ruby '3.4.13'
 
 gem 'rails', '~> 7.0'
 # Use postgresql as the database for Active Record
@@ -34,6 +34,8 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  # Spring 2.x needs mutex_m, which Ruby 3.4 no longer ships as a default gem
+  gem 'mutex_m'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
